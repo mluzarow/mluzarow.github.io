@@ -1,5 +1,5 @@
 body {
-    background-image: url("../img/background_pattern_v3.png");
+    background-image: url("../img/background_pattern_v4.png");
     background-repeat: repeat;
     margin: 0px;
 }
@@ -21,6 +21,7 @@ body {
     color: white;
 }
 
+/* Navigation bar styling */
 ul {
     list-style-type: none;
     margin: 0px;
