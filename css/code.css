@@ -9,9 +9,9 @@ body {
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 20px;
-    background-color: grey;
+    background-color: #333;
     color: white;
-    border: solid 4px #333;
+    border: solid 5px #2D2D2D;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -25,11 +25,11 @@ body {
 .section_content {
     font-size: 18px;
     font-family: "Arial";
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .code_io {
-    background-color: teal;
+    background-color: #5B4E4E;
     padding-left: 25px;
     padding-top: 20px;
     padding-bottom: 20px;
