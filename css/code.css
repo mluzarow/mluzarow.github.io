@@ -5,8 +5,69 @@ body {
     margin: 0px;
 }
 
-#box {
+#statement {
     margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20px;
+    background-color: grey;
+    color: white;
+    border: solid 4px #333;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.section_header {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Arial";
+    padding-bottom: 5px;
+}
+.section_content {
+    font-size: 18px;
+    font-family: "Arial";
+    padding-bottom: 10px;
+}
+
+.code_io {
+    background-color: teal;
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Code tabs */
+#code_tab_box {
+    margin-left: 20%;
+    margin-right: 20%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+#code_tab_box a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+#code_tab_box a:hover {
+    background-color: #ddd;
+}
+
+#code_tab_box a:focus, .active {
+    background-color: #ccc;
+}
+
+.code_tab_content {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
 
 /* Navigation bar styling */
