@@ -41,8 +41,7 @@ body {
     margin-right: 20%;
     margin-top: 10px;
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    background-color: #333;
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
@@ -50,7 +49,7 @@ body {
 #code_tab_box a {
     float: left;
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -59,11 +58,11 @@ body {
 }
 
 #code_tab_box a:hover {
-    background-color: #ddd;
+    background-color: #FF5151;
 }
 
 #code_tab_box a:focus, .active {
-    background-color: #ccc;
+    background-color: red;
 }
 
 .code_tab_content {
