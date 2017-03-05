@@ -158,39 +158,35 @@
         </a>
     </div>
     
-    <div id="Haskell" class="code_tab_content">
-        <pre>
-            <code class="haskell">
-                main = do
-                    -- Get a line of input from stdin and save it to our variable
-                    inputString <- getLine
-                    -- Your first line of output goes here
-                    putStrLn ("Hello, World.")
-                    -- Write the second line of output
-                    putStrLn (inputString)
-            </code>
-        </pre>
+    <div id="Haskell" class="code_tab_content default">
+        <pre><code class="haskell">
+main = do
+    -- Get a line of input from stdin and save it to our variable
+    inputString <- getLine
+    -- Your first line of output goes here
+    putStrLn ("Hello, World.")
+    -- Write the second line of output
+    putStrLn (inputString)
+        </code></pre>
     </div>
     <div id="C" class="code_tab_content">
-        <pre>
-            <code class="c">
-                int main() {
-                    // Declare a variable named 'input_string' to hold our input.
-                    char input_string[105]; 
-                    
-                    // Read a full line of input from stdin and save it to our variable, input_string.
-                    scanf("%[^\n]", input_string); 
-                    
-                    // Print a string literal saying "Hello, World." to stdout using printf.
-                    printf("Hello, World.\n");
-                    
-                    // prints the contents of input_string to stdout.
-                    printf ("%s", input_string);
-                    
-                    return 0;
-                }
-            </code>
-        </pre>
+        <pre><code class="c">
+int main() {
+    // Declare a variable named 'input_string' to hold our input.
+    char input_string[105]; 
+    
+    // Read a full line of input from stdin and save it to our variable, input_string.
+    scanf("%[^\n]", input_string); 
+    
+    // Print a string literal saying "Hello, World." to stdout using printf.
+    printf("Hello, World.\n");
+    
+    // prints the contents of input_string to stdout.
+    printf ("%s", input_string);
+    
+    return 0;
+}
+        </code></pre>
     </div>
 </body>
 </html>

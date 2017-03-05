@@ -39,9 +39,12 @@ body {
 #code_tab_box {
     margin-left: 20%;
     margin-right: 20%;
+    margin-top: 10px;
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 #code_tab_box a {
@@ -65,9 +68,14 @@ body {
 
 .code_tab_content {
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+    padding: 0px;
+    margin-top: 0px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 50px;
+    background-color: #282B2E;
+    height: 300px;
+    overflow: auto;
 }
 
 /* Navigation bar styling */
