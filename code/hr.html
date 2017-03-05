@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/code.css">
+    <link rel="stylesheet" type="text/css" href="../css/androidstudio.css">
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/codeTabs.js"></script>
+    
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <ul>
+        <li>
+            <a href="../index.html">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="../blog/home.html">
+                Blog
+            </a>
+        </li>
+        <li id="dropdown">
+            <a href="../mods/mods.html" id="dropdown_btn">
+                Mods
+            </a>
+            <div id="dropdown_content">
+                <a href="../mods/payday2.html">
+                    Payday 2
+                </a>
+                <a href="../mods/stellaris.html">
+                    Stellaris
+                </a>
+            </div>
+        </li>
+        <li id="dropdown">
+            <a href="../apps/apps.html" id="dropdown_btn">
+                Apps
+            </a>
+            <div id="dropdown_content">
+                <a href="https://mluzarow.github.io/WebGraphingCalc">
+                    Graphing Calculator
+                </a>
+                <a href="https://mluzarow.github.io/crash-countdown">
+                    Crash Bandicoot Countdown
+                </a>
+            </div>
+        </li>
+        <li id="dropdown">
+            <a href="../art/art.html" id="dropdown_btn">
+                Art
+            </a>
+            <div id="dropdown_content">
+                <a href="../art/manga.html">
+                    Colored Manga
+                </a>
+            </div>
+        </li>
+        <li>
+            <a href="../about.html">
+                About
+            </a>
+        </li>
+        
+    </ul>
+    
+    <!-- Page content -->
+    <div id="statement">
+        <div class="section_header">
+            Objective
+        </div>
+        <div class="section_content">
+            In this challenge, we review some basic concepts that will get you started with this series.
+            You will need to use the same (or similar) syntax to read input and write output in
+            challenges throughout HackerRank. Check out the 
+            <a href="https://www.hackerrank.com/challenges/30-hello-world/tutorial">Tutorial</a> tab for
+            learning materials and an instructional video!
+        </div>
+        
+        <div class="section_header">
+            Task
+        </div>
+        <div class="section_content">
+            To complete this challenge, you must save a line of input from stdin to a variable,
+            print Hello, World. on a single line, and finally print the value of your variable on a
+            second line.
+            </br>
+            </br>
+            You've got this!
+            </br>
+            </br>
+            <b>Note:</b> The instructions are Java-based, but we support submissions in many popular
+            languages. You can switch languages using the drop-down menu above your editor, and the
+            variable may be written differently depending on the best-practice conventions of your
+            submission language.
+        </div>
+        
+        <div class="section_header">
+            Input Format
+        </div>
+        <div class="section_content">
+            A single line of text denoting <i>inputString</i> (the variable whose contents must be
+            printed).
+        </div>
+        
+        <div class="section_header">
+            Output Format
+        </div>
+        <div class="section_content">
+            Print Hello, World. on the first line, and the contents of <i>inputString</i> on the
+            second line.
+        </div>
+        
+        <div class="section_header">
+            Sample Input
+        </div>
+        <div class="section_content">
+            <div class="code_io">
+                Welcome to 30 Days of Code!
+            </div>
+        </div>
+        
+        <div class="section_header">
+            Sample Output
+        </div>
+        <div class="section_content">
+            <div class="code_io">
+                Hello, World.
+                </br>
+                Welcome to 30 Days of Code!
+            </div>
+        </div>
+        
+        <div class="section_header">
+            Explanation
+        </div>
+        <div class="section_content">
+            On the first line, we print the string literal Hello, World.. On the second line,
+            we print the contents of the <i>inputString</i> variable which, for this sample case,
+            happens to be Welcome to 30 Days of Code!. If you do not print the variable's contents
+            to stdout, you will not pass the hidden test case.
+        </div>
+    </div>
+    
+    
+    <div id="code_tab_box">
+        <a href="javascript:void(0)" class="code_tab" onclick="selectTab (event, 'Haskell')">
+            Haskell
+        </a>
+        <a href="javascript:void(0)" class="code_tab" onclick="selectTab (event, 'C')">
+            C
+        </a>
+        <a href="javascript:void(0)" class="code_tab" onclick="selectTab (event, 'C_Plus_Plus')">
+            C++
+        </a>
+        <a href="javascript:void(0)" class="code_tab" onclick="selectTab (event, 'C_Sharp')">
+            C#
+        </a>
+        <a href="javascript:void(0)" class="code_tab" onclick="selectTab (event, 'Java')">
+            Java
+        </a>
+    </div>
+    
+    <div id="Haskell" class="code_tab_content default">
+        <pre><code class="haskell">
+main = do
+    -- Get a line of input from stdin and save it to our variable
+    inputString <- getLine
+    -- Your first line of output goes here
+    putStrLn ("Hello, World.")
+    -- Write the second line of output
+    putStrLn (inputString)
+        </code></pre>
+    </div>
+    <div id="C" class="code_tab_content">
+        <pre><code class="c">
+int main() {
+    // Declare a variable named 'input_string' to hold our input.
+    char input_string[105]; 
+    
+    // Read a full line of input from stdin and save it to our variable, input_string.
+    scanf("%[^\n]", input_string); 
+    
+    // Print a string literal saying "Hello, World." to stdout using printf.
+    printf("Hello, World.\n");
+    
+    // prints the contents of input_string to stdout.
+    printf ("%s", input_string);
+    
+    return 0;
+}
+        </code></pre>
+    </div>
+    <div id="C_Plus_Plus" class="code_tab_content">
+        <pre><code class="cpp">
+#include <cstdio>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // Declare a variable named 'input_string' to hold our input.
+    string input_string; 
+    
+    // Read a full line of input from stdin (cin) and save it to our variable, input_string.
+    getline(cin, input_string); 
+    
+    // Print a string literal saying "Hello, World." to stdout using cout.
+    cout << "Hello, World." << endl;
+
+    // TODO: Write a line of code here that prints the contents of input_string to stdout.
+    cout << input_string << endl;
+    return 0;
+}
+        </code></pre>
+    </div>
+    <div id="C_Sharp" class="code_tab_content">
+        <pre><code class="cs">
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+class Solution {
+    static void Main(String[] args) {
+        // Declare a variable named 'inputString' to hold our input.
+        String inputString; 
+        
+        // Read a full line of input from stdin (cin) and save it to our variable, input_string.
+        inputString = Console.ReadLine(); 
+        
+        // Print a string literal saying "Hello, World." to stdout using cout.
+        Console.WriteLine("Hello, World.");
+        
+        // TODO: Write a line of code here that prints the contents of input_string to stdout.
+        Console.WriteLine (inputString);
+    }
+}
+        </code></pre>
+    </div>
+    <div id="Java" class="code_tab_content">
+        <pre><code class="java">
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+	public static void main(String[] args) {
+        // Create a Scanner object to read input from stdin.
+		Scanner scan = new Scanner(System.in); 
+		
+		// Read a full line of input from stdin and save it to our variable, inputString.
+		String inputString = scan.nextLine(); 
+
+		// Close the scanner object, because we've finished reading 
+        //   all of the input from stdin needed for this challenge.
+		scan.close(); 
+      
+		// Print a string literal saying "Hello, World." to stdout.
+		System.out.println ("Hello, World.");
+      
+	    // TODO: Write a line of code here that prints the contents of inputString to stdout.
+        System.out.println (inputString);
+	}
+}
+        </code></pre>
+    </div>
+</body>
+</html>
