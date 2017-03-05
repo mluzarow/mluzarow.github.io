@@ -156,6 +156,15 @@
         <a href="javascript:void(0)" class="code_tab" onclick="selectTab (event, 'C')">
             C
         </a>
+        <a href="javascript:void(0)" class="code_tab" onclick="selectTab (event, 'C_Plus_Plus')">
+            C++
+        </a>
+        <a href="javascript:void(0)" class="code_tab" onclick="selectTab (event, 'C_Sharp')">
+            C#
+        </a>
+        <a href="javascript:void(0)" class="code_tab" onclick="selectTab (event, 'Java')">
+            Java
+        </a>
     </div>
     
     <div id="Haskell" class="code_tab_content default">
@@ -185,6 +194,81 @@ int main() {
     printf ("%s", input_string);
     
     return 0;
+}
+        </code></pre>
+    </div>
+    <div id="C_Plus_Plus" class="code_tab_content">
+        <pre><code class="cpp">
+#include <cstdio>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // Declare a variable named 'input_string' to hold our input.
+    string input_string; 
+    
+    // Read a full line of input from stdin (cin) and save it to our variable, input_string.
+    getline(cin, input_string); 
+    
+    // Print a string literal saying "Hello, World." to stdout using cout.
+    cout << "Hello, World." << endl;
+
+    // TODO: Write a line of code here that prints the contents of input_string to stdout.
+    cout << input_string << endl;
+    return 0;
+}
+        </code></pre>
+    </div>
+    <div id="C_Sharp" class="code_tab_content">
+        <pre><code class="cs">
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+class Solution {
+    static void Main(String[] args) {
+        // Declare a variable named 'inputString' to hold our input.
+        String inputString; 
+        
+        // Read a full line of input from stdin (cin) and save it to our variable, input_string.
+        inputString = Console.ReadLine(); 
+        
+        // Print a string literal saying "Hello, World." to stdout using cout.
+        Console.WriteLine("Hello, World.");
+        
+        // TODO: Write a line of code here that prints the contents of input_string to stdout.
+        Console.WriteLine (inputString);
+    }
+}
+        </code></pre>
+    </div>
+    <div id="Java" class="code_tab_content">
+        <pre><code class="java">
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+	public static void main(String[] args) {
+        // Create a Scanner object to read input from stdin.
+		Scanner scan = new Scanner(System.in); 
+		
+		// Read a full line of input from stdin and save it to our variable, inputString.
+		String inputString = scan.nextLine(); 
+
+		// Close the scanner object, because we've finished reading 
+        //   all of the input from stdin needed for this challenge.
+		scan.close(); 
+      
+		// Print a string literal saying "Hello, World." to stdout.
+		System.out.println ("Hello, World.");
+      
+	    // TODO: Write a line of code here that prints the contents of inputString to stdout.
+        System.out.println (inputString);
+	}
 }
         </code></pre>
     </div>
