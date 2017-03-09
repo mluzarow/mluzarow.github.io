@@ -1,7 +1,22 @@
 body {
-    background-image: url("../img/background_pattern_v4.png");
-    background-repeat: repeat;
     margin: 0px;
+    transition: 1s;
+}
+
+#code_words {
+    position: absolute;
+    height: auto;
+    top: 48px;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    background-color:black;
+    color: green;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 15px;
+    font-size: 20px;
+    overflow: auto;
 }
 
 /*#floaty_pane {
@@ -13,13 +28,6 @@ body {
     background-color: black;
     color: white;
 }*/
-
-#title_card {
-    text-align: center;
-    padding-top: 20%;
-    font-size: 150px;
-    color: white;
-}
 
 /* Navigation bar styling */
 ul {
