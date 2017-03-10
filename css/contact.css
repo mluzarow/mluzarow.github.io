@@ -34,3 +34,7 @@ body {
     height: 256px;
     padding: 2px;
 }
+
+#contact_methods a {
+    color: white;
+}
