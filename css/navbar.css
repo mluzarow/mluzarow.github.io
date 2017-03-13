@@ -51,3 +51,11 @@ li a:hover, #dropdown:hover #dropdown_btn {
 #dropdown:hover #dropdown_content {
     display: block;
 }
+
+#logo img{
+    width: 100px;
+    height: 20px;
+}
+#logo a:hover {
+    background-color: #333;
+}
