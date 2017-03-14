@@ -17,8 +17,55 @@ body {
     padding-right: 15px;
     font-size: 20px;
     overflow: auto;
+	z-index: 0;
+	display: none;
 }
 
+/* Chat Box */
+#chatBox {
+	z-index: 1;
+	height: 300px;
+	width: 300px;
+	top: 60px;
+	left:10px;
+	background-color: grey;
+}
+
+#chatBox_topBar {
+	width: 300px;
+	height: 20px;
+	background-color: black;
+	color: white;
+}
+
+#chatBox_chat {
+	background-color: #333;
+	margin-top: 50px;
+	margin-left: 5px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	height: 150px;
+	width: 280px;
+	overflow: auto;
+}
+
+#chatBox_chat_controls {
+	margin-left: 5px;
+}
+
+#chatBox_chat_controls textarea {
+	width: 220px;
+	height: 40px;
+	border: none;
+	overflow: auto;
+	
+}
+#chatBox_chat_controls button {
+	border: none;
+	height: 42px;
+	width: 50px;
+	
+}
 /*#floaty_pane {
     height: 5000px;
     width: 800px; 
