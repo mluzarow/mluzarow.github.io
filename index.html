@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <script type="text/javascript" src="js/code_words.js"></script>
+    <script type="text/javascript" src="js/chat.js"></script>
     
     <title>My Site</title>
 </head>
@@ -70,30 +71,29 @@
         </li>
     </ul>
     
-	<!-- Floating emulated chat box -->
-	
-	<div id="chatBox">
-		<!-- dragable bar w/ controls -->
-		<div id="chatBox_topBar">
-			Chat box
-		</div>
-		<!-- the rest of the window -->
-		<div id="chatBox_chat_frame">
-			<!-- The chat itself -->
-			<div id="chatBox_chat">
-				<!-- Test goes here -->
-			</div>
-			<div id="chatBox_chat_controls">
-				<!-- Text input area for user -->
-					
-				<!-- Chat send button -->
-				<button id="chatBox_chat_button">
-					Send
-				</button>
-			</div>
-		</div>
-	</div>
-	
+    <!-- Floating emulated chat box -->
+    <div id="chatBox">
+        <!-- dragable bar w/ controls -->
+        <div id="chatBox_topBar">
+            Chat box
+        </div>
+        <!-- the rest of the window -->
+        <div id="chatBox_chat_frame">
+            <!-- The chat itself -->
+            <div id="chatBox_chat">
+                <!-- Test goes here -->
+            </div>
+            <div id="chatBox_chat_controls">
+                <!-- Text input area for user -->
+                <textarea id="chatBox_chat_textBox"></textarea>
+                <!-- Chat send button -->
+                <button id="chatBox_chat_button">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+
     <div id="code_words" tabindex="0">
         
     </div>
