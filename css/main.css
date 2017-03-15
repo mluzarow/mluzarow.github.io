@@ -3,13 +3,43 @@ body {
     transition: background-color 2s, color 2s;
 }
 
+#r_front {
+    position: absolute;
+    height: auto%;
+    top: 48px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: black;
+}
+
+#r_title {
+    text-align: center;
+    margin-top: 200px;
+    font-size: 200px;
+    color: #333;
+}
+
+#r_title mark {
+    background-color: red;
+    padding-bottom: 30px;
+    border-radius: 30px;
+}
+
+#r_subtitle {
+    font-size: 65px;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+}
+
 #code_words {
     position: absolute;
     height: auto;
     top: 48px;
     bottom: 0; 
     left: 0;
-    right: 0;
+    right: 50%;
     background-color:black;
     color: green;
     padding-top: 20px;
@@ -18,6 +48,7 @@ body {
     font-size: 20px;
     overflow: auto;
 	z-index: 0;
+    display: none;
 }
 
 /* Chat Box */
