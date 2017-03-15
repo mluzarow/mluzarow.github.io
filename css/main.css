@@ -16,7 +16,7 @@ body {
 #r_title {
     text-align: center;
     margin-top: 200px;
-    font-size: 200px;
+    font-size: 1200%;
     color: #333;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 #r_subtitle {
-    font-size: 65px;
+    font-size: 380%;
     color: #333;
     text-align: center;
     margin-top: 50px;
