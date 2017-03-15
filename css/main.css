@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    transition: 1s;
+    transition: background-color 2s, color 2s;
 }
 
 #code_words {
@@ -29,6 +29,7 @@ body {
     top: 60px;
     left: 10px;
     background-color: grey;
+    transition: background-color 2s;
 }
 
 #chatBox_topBar {
@@ -37,6 +38,7 @@ body {
     background-color: #33c;
     color: white;
     cursor: pointer;
+    transition: background-color 2s, color 2s;
 }
 
 #chatBox_chat {
@@ -50,22 +52,34 @@ body {
     height: 150px;
     width: 280px;
     overflow: auto;
+    transition: background-color 2s, color 2s;
 }
 
 #chatBox_chat_controls {
     margin-left: 5px;
+    height: 40px;
 }
 
 #chatBox_chat_controls textarea {
     width: 220px;
     height: 40px;
     border: none;
-    resize: none;
+    resize: none;   
 }
+
 #chatBox_chat_controls button {
     border: none;
     height: 42px;
     width: 50px;
+    border: none;
+    margin-left: 5px;
+    position: absolute;
+}
+
+#chatBox_chat_status {
+    padding-left: 8px;
+    display: none;
+    transition: color 2s;
 }
 /*#floaty_pane {
     height: 5000px;
