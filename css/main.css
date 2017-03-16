@@ -41,7 +41,7 @@ body {
     position: relative;
     width: 0.5em;
     color: black;
-    font-size: 1em;
+    font-size: 11vw;
     text-align: center;
     display: inline-block;
     opacity: 0;
@@ -52,11 +52,13 @@ body {
 }
 #r_title_brace_left {
     width: 0.5em;
+    font-size: 11vw;
     position: relative;
     display: inline-block;
 }
 #r_title_brace_right {
     width: 0.5em;
+    font-size: 11vw;
     position: relative;
     display: inline-block;
 }
