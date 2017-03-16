@@ -26,16 +26,17 @@ body {
 /* The m {luzarow} title card */
 #r_title {
     text-align: center;
-    margin-top: 200px;
-    font-size: 1200%;
+    margin-top: 25vh; /* Scale centering with viewport height */
+    font-size: 12vw;  /* Scale font size to fit viewport width */
     color: #333;
 }
+/* Children use scaled em measurements */
 #r_title_highlight {
     position: relative;
     background-color: red;
     width: 1em;
-    padding-bottom: 30px;
-    border-radius: 30px;
+    padding-bottom: .2em;
+    border-radius: 0.2em;
     display: inline;
     color: black;
 }
@@ -64,12 +65,13 @@ body {
 
 /* Joke subtitle */
 #r_subtitle {
-    font-size: 380%;
+    font-size: 4vw;
     color: #333;
     text-align: center;
     margin-top: 50px;
 }
 
+/*
 #code_words {
     position: absolute;
     height: auto;
@@ -86,7 +88,7 @@ body {
     overflow: auto;
 	z-index: 0;
     display: none;
-}
+} */
 
 /* Chat Box */
 #chatBox {
