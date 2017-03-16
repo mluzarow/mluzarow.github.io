@@ -1,15 +1,16 @@
 body {
-    background-image: url("../img/background_pattern_v4.png");
-    background-repeat: repeat;
+    background-color: black;
     margin: 0px;
+    padding: 0px;
+    z-index: 0;
 }
 
 #contact_box {
     margin-left: 20%;
     margin-right: 20%;
+    padding-top: 20vh;
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 50px;
     background-color: black;
     color: white;
 }
