@@ -10,17 +10,14 @@
 
 body {
     margin: 0px;
-    transition: background-color 2s, color 2s;
 }
 
 #r_front {
     position: absolute;
-    height: auto;
-    top: 48px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    height: 100%;
+    width: 100%;
     background-color: black;
+    z-index: 0;
 }
 
 /* The m {luzarow} title card */
@@ -92,7 +89,7 @@ body {
 } */
 
 /* Chat Box */
-#chatBox {
+/*#chatBox {
     position: absolute;
     z-index: 1;
     height: 300px;
@@ -152,7 +149,7 @@ body {
     padding-left: 8px;
     display: none;
     transition: color 2s;
-}
+}*/
 /*#floaty_pane {
     height: 5000px;
     width: 800px; 
