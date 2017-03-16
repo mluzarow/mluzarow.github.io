@@ -1,7 +1,11 @@
-@media (max-width: 900px;) {
-    html {
-        font-size: 40%;
-    }
+
+@keyframes intro_inside {
+    from {width: 0em;}
+    to {width: 3.1em;}
+}
+@keyframes intro_color {
+    from {opacity: 0}
+    to {opacity: 1}
 }
 
 body {
@@ -11,7 +15,7 @@ body {
 
 #r_front {
     position: absolute;
-    height: auto%;
+    height: auto;
     top: 48px;
     bottom: 0px;
     left: 0px;
@@ -19,19 +23,46 @@ body {
     background-color: black;
 }
 
+/* The m {luzarow} title card */
 #r_title {
     text-align: center;
     margin-top: 200px;
     font-size: 1200%;
     color: #333;
 }
-
-#r_title mark {
+#r_title_highlight {
+    position: relative;
     background-color: red;
+    width: 1em;
     padding-bottom: 30px;
     border-radius: 30px;
+    display: inline;
+    color: black;
+}
+#r_title_inside {
+    position: relative;
+    width: 0.5em;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    opacity: 0;
+    animation-name: intro_inside, intro_color;
+    animation-duration: 2s, 2s;
+    animation-delay: 0s, 2s;
+    animation-fill-mode: forwards;
+}
+#r_title_brace_left {
+    width: 0.5em;
+    position: relative;
+    display: inline-block;
+}
+#r_title_brace_right {
+    width: 0.5em;
+    position: relative;
+    display: inline-block;
 }
 
+/* Joke subtitle */
 #r_subtitle {
     font-size: 380%;
     color: #333;
@@ -67,6 +98,7 @@ body {
     left: 10px;
     background-color: grey;
     transition: background-color 2s;
+    display: none;
 }
 
 #chatBox_topBar {
