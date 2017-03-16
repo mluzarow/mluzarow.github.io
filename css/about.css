@@ -1,0 +1,29 @@
+body {
+    background-image: url("../img/background_pattern_v4.png");
+    background-repeat: repeat;
+    margin: 0px;
+}
+
+#comments {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    border: solid 5px #2D2D2D;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.comments_header {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Arial";
+    padding-bottom: 5px;
+}
+
+.comments_text {
+    font-size: 18px;
+    font-family: "Arial";
+    padding-bottom: 15px;
+}
