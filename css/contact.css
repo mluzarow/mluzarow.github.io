@@ -18,7 +18,7 @@ body {
 #contact_header {
     text-align: center;
     padding-top: 30px;
-    font-size: 72px;
+    font-size: 4vw;
     padding-bottom: 50px;
 }
 
@@ -28,14 +28,16 @@ body {
 
 #contact_methods div {
     display: inline-block;
+    font-size: 0.9vw;
 }
 
 #contact_methods img {
-    width: 256px;
-    height: 256px;
+    width: 15vw;
+    height: 15vw;
     padding: 2px;
 }
 
 #contact_methods a {
     color: white;
+
 }
