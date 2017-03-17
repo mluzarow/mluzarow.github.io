@@ -37,7 +37,7 @@ ul {
 
 li {
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 12px;
     float: left;
     color: grey;
 } 
@@ -48,5 +48,6 @@ li a {
 }
 
 li a:hover {
-    border-bottom: thick solid red;
+    border-top: solid red;
+    color: lightgrey;
 }
