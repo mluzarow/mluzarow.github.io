@@ -2,17 +2,27 @@ body {
     background-image: url("../img/background_pattern_v4.png");
     background-repeat: repeat;
     margin: 0px;
+    padding: 0px;
 }
 
 #comments {
+    position: absolute;
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 20px;
-    background-color: #333;
+    margin-top: 50px;
+    padding-top: 20px;
+    background-color: #1A1A1A;
+    border-radius: 10px;
     color: white;
-    border: solid 5px #2D2D2D;
-    padding-left: 10px;
-    padding-right: 10px;
+    /*border-left: 1px solid #5F5F5F;
+    border-right: 1px solid #5F5F5F;*/
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#comments a {
+    color: red;
 }
 
 .comments_header {
@@ -20,6 +30,7 @@ body {
     font-weight: bold;
     font-family: "Arial";
     padding-bottom: 5px;
+    padding-top: 10px;
 }
 
 .comments_text {
