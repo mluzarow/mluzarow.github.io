@@ -4,6 +4,18 @@ body {
     padding: 0px;
 }
 
+#column_1 {
+    height: auto;
+    width: 49%;
+    display: inline-block;
+}
+
+#column_2 {
+    height: auto;
+    width: 50%;
+    display: inline-block;
+}
+
 .project_box {
     position: static;
     background-color: black;
@@ -11,7 +23,7 @@ body {
     height: 20vw;
     border-radius: 10px;
     border: solid dimgrey;
-    margin-left: 5vw;
+    margin-left: 1vw;
     margin-top: 5vw;
     overflow: hidden;
     transition: width 2s;
