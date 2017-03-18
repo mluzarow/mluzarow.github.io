@@ -1,5 +1,9 @@
 var boxes;
 
+/* Animation vars */
+var BOX_OPEN_WIDTH = "47vw";
+var INFO_OPEN_WIDTH = "25vw";
+
 window.onload = function () {
     // Find all boxes on page
     boxes = document.getElementsByClassName ("project_box");
@@ -19,10 +23,10 @@ function animate (target) {
         this.style.transitionDelay = "0s";
         this.getElementsByClassName ("project_info")[0].style.transitionDelay = "0s";
         
-        this.style.width = "50vw";
+        this.style.width = BOX_OPEN_WIDTH;
         this.getElementsByClassName ("project_comments")[0].style.visibility = "visible";
         this.getElementsByClassName ("project_comments")[0].style.opacity = 1;
-        this.getElementsByClassName ("project_info")[0].style.width = "28vw";
+        this.getElementsByClassName ("project_info")[0].style.width = INFO_OPEN_WIDTH;
         this.getElementsByClassName ("project_extender")[0].innerHTML = "<";
         
         this.id = "open";
