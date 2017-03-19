@@ -52,6 +52,7 @@ body {
 
 .project_comments {
     padding-left: 15px;
+    padding-right: 10px;
     font-size: 1vw;
     visibility: hidden;
     opacity: 0;
