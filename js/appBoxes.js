@@ -27,7 +27,7 @@ function animate (target) {
         this.getElementsByClassName ("project_comments")[0].style.visibility = "visible";
         this.getElementsByClassName ("project_comments")[0].style.opacity = 1;
         this.getElementsByClassName ("project_info")[0].style.width = INFO_OPEN_WIDTH;
-        this.getElementsByClassName ("project_extender")[0].innerHTML = "<";
+        this.getElementsByClassName ("project_extender")[0].innerHTML = "</br></br></br></br><";
         
         this.id = "open";
     } else {
@@ -40,7 +40,7 @@ function animate (target) {
         this.getElementsByClassName ("project_comments")[0].style.visibility = "hidden";
         this.getElementsByClassName ("project_comments")[0].style.opacity = 0;
         this.getElementsByClassName ("project_info")[0].style.width = "0vw";
-        this.getElementsByClassName ("project_extender")[0].innerHTML = ">";
+        this.getElementsByClassName ("project_extender")[0].innerHTML = "</br></br></br></br>>";
         
         this.id = "closed";
     }
