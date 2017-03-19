@@ -1,61 +1,53 @@
 /* Navigation bar styling */
-ul {
-    list-style-type: none;
+#nb_frame {
+    position: relative;
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
-    background-color: #333;
+    z-index: 1;
+    font-size: 2em;
+}
+
+#logo {
+    float: left;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: grey;
+}
+
+#logo div {
+    background-color: red;
+    display: inline;
+    padding-bottom: 4px;
+    border-radius: 4px;
+}
+
+#logo span {
+    color: black;
+}
+
+ul {
+    font-family: "Arial";
+    margin: 0px;
+    margin-right: 10px;
+    padding: 0px;
+    float: right;
+    display: inline-block;
+    list-style-type: none;
 }
 
 li {
-    float: left;
-}
-
-li a, #dropdown_btn {
-    display: inline-block;
-    color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 12px;
+    float: left;
+    color: grey;
+} 
+
+li a {
     text-decoration: none;
+    color: grey;
 }
 
-li a:hover, #dropdown:hover #dropdown_btn {
-    background-color: red;
-}
-
-#dropdown {
-    display: inline-block;
-}
-
-#dropdown_content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-#dropdown_content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-#dropdown_content a:hover {
-    background-color: #f1f1f1
-}
-
-#dropdown:hover #dropdown_content {
-    display: block;
-}
-
-#logo img{
-    width: 100px;
-    height: 20px;
-}
-#logo a:hover {
-    background-color: #333;
+li a:hover {
+    border-top: solid red;
+    color: lightgrey;
 }
