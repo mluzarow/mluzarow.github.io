@@ -51,3 +51,22 @@ li a:hover {
     border-top: solid red;
     color: lightgrey;
 }
+
+/* Spacers */
+#db_spacer_1 {
+    height: 1px;
+    background-color: black;
+    border-bottom: solid red;
+}
+
+#db_spacer_2 {
+    height: 5px;
+    background-color: black;
+}
+
+#db_spacer_3 {
+    height: 15px;
+    background-color: black;
+    border-top: solid red;
+}
+

@@ -1,6 +1,5 @@
 body {
-    background-image: url("../img/background_pattern_v4.png");
-    background-repeat: repeat;
+    background-color: black;
     margin: 0px;
     padding: 0px;
 }
@@ -14,9 +13,6 @@ body {
     background-color: #1A1A1A;
     border-radius: 10px;
     color: white;
-    /*border-left: 1px solid #5F5F5F;
-    border-right: 1px solid #5F5F5F;*/
-
     padding-left: 15px;
     padding-right: 15px;
 }
