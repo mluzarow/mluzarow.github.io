@@ -1,7 +1,6 @@
 /* Everything else */
 body {
-    background-image: url("../img/background_pattern_v4.png");
-    background-repeat: repeat;
+    background-color: black;
     margin: 0px;
 }
 
