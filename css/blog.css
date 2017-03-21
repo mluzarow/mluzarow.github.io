@@ -14,6 +14,7 @@ body {
 #comments {
     position: absolute;
     margin-left: 20vw;
+    min-width: 700px;
     width: 60vw;
     margin-top: 40px;
     padding-top: 20px;
