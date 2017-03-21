@@ -1,9 +1,157 @@
+
+@keyframes intro_inside {
+    from {width: 0em;}
+    to {width: 3.1em;}
+}
+@keyframes intro_color {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
 body {
-    background-image: url("../img/background_pattern_v4.png");
-    background-repeat: repeat;
     margin: 0px;
 }
 
+#r_front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 0;
+}
+
+/* The m {luzarow} title card */
+#r_title {
+    text-align: center;
+    margin-top: 30vh; /* Scale centering with viewport height */
+    font-size: 11vw;  /* Scale font size to fit viewport width */
+    color: #333;
+}
+/* Children use scaled em measurements */
+#r_title_highlight {
+    position: relative;
+    background-color: red;
+    width: 1em;
+    padding-bottom: .2em;
+    border-radius: 0.2em;
+    display: inline;
+    color: black;
+}
+#r_title_inside {
+    position: relative;
+    width: 0.5em;
+    color: black;
+    font-size: 11vw;
+    text-align: center;
+    display: inline-block;
+    opacity: 0;
+    animation-name: intro_inside, intro_color;
+    animation-duration: 2s, 2s;
+    animation-delay: 0s, 2s;
+    animation-fill-mode: forwards;
+}
+#r_title_brace_left {
+    width: 0.5em;
+    font-size: 11vw;
+    position: relative;
+    display: inline-block;
+}
+#r_title_brace_right {
+    width: 0.5em;
+    font-size: 11vw;
+    position: relative;
+    display: inline-block;
+}
+
+/* Joke subtitle */
+#r_subtitle {
+    font-size: 3.7vw;
+    color: #333;
+    text-align: center;
+    margin-top: 1em;
+}
+
+/*
+#code_words {
+    position: absolute;
+    height: auto;
+    top: 48px;
+    bottom: 0; 
+    left: 0;
+    right: 50%;
+    background-color:black;
+    color: green;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 15px;
+    font-size: 20px;
+    overflow: auto;
+	z-index: 0;
+    display: none;
+} */
+
+/* Chat Box */
+/*#chatBox {
+    position: absolute;
+    z-index: 1;
+    height: 300px;
+    width: 300px;
+    top: 60px;
+    left: 10px;
+    background-color: grey;
+    transition: background-color 2s;
+    display: none;
+}
+
+#chatBox_topBar {
+    width: 300px;
+    height: 20px;
+    background-color: #33c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 2s, color 2s;
+}
+
+#chatBox_chat {
+    background-color: #333;
+    color: white;
+    font-size: 12px;
+    margin-top: 50px;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    height: 150px;
+    width: 280px;
+    overflow: auto;
+    transition: background-color 2s, color 2s;
+}
+
+#chatBox_chat_controls {
+    margin-left: 5px;
+    height: 40px;
+}
+
+#chatBox_chat_controls textarea {
+    width: 220px;
+    height: 40px;
+    border: none;
+    resize: none;   
+}
+
+#chatBox_chat_controls button {
+    border: none;
+    height: 42px;
+    width: 50px;
+    border: none;
+    margin-left: 5px;
+    position: absolute;
+}
+
+#chatBox_chat_status {
+    padding-left: 8px;
+    display: none;
+    transition: color 2s;
+}*/
 /*#floaty_pane {
     height: 5000px;
     width: 800px; 
@@ -13,64 +161,3 @@ body {
     background-color: black;
     color: white;
 }*/
-
-#title_card {
-    text-align: center;
-    padding-top: 20%;
-    font-size: 150px;
-    color: white;
-}
-
-/* Navigation bar styling */
-ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a, #dropdown_btn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover, #dropdown:hover #dropdown_btn {
-    background-color: red;
-}
-
-#dropdown {
-    display: inline-block;
-}
-
-#dropdown_content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-#dropdown_content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-#dropdown_content a:hover {
-    background-color: #f1f1f1
-}
-
-#dropdown:hover #dropdown_content {
-    display: block;
-}

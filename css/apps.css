@@ -1,0 +1,107 @@
+body {
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+#column_1 {
+    
+    height: auto;
+    width: 49%;
+    display: inline-block;
+}
+
+#column_2 {
+    height: auto;
+    width: 50%;
+    display: inline-block;
+}
+
+.project_box {
+    position: static;
+    background-color: black;
+    width: 22vw;
+    height: 20vw;
+    border-radius: 10px;
+    border: solid dimgrey;
+    margin-left: 1vw;
+    margin-top: 5vw;
+    overflow: hidden;
+    transition: width 2s;
+}
+
+.project_image {
+    position: static;
+    float: left;
+    width: 20vw;
+    height: 20vw;
+}
+
+.project_info {
+    width: 0vw;
+    height: 20vw;
+    float: left;
+    background-color: grey;
+    overflow: visible;
+    font-family: "Arial";
+    transition: width 2s;
+}
+
+.project_title {
+    font-size: 2vw;
+}
+
+.project_comments {
+    padding-left: 15px;
+    padding-right: 10px;
+    font-size: 1vw;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s;
+    transition-delay: 2s;
+}
+
+.project_links a {
+    text-decoration: none;
+    color: white;
+    float: left;
+    background-color: #333;
+    padding: 10px 10px;
+}
+
+.project_links a:hover {
+    color: white;
+    border: none;
+    background-color: dimgrey;
+    
+}
+
+.project_extender {
+    float: right;
+    background-color: dimgrey;
+    height: 20vw;
+    width: 2vw;
+    color: black;
+    font-family: "Arial";
+    font-size: 2vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* navbar stuff */
+#db_spacer_1 {
+    height: 1px;
+    background-color: black;
+    border-bottom: solid red;
+}
+
+#db_spacer_2 {
+    height: 5px;
+    background-color: black;
+}
+
+#db_spacer_3 {
+    height: 15px;
+    background-color: black;
+    border-top: solid red;
+}

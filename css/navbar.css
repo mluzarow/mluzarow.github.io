@@ -1,0 +1,53 @@
+/* Navigation bar styling */
+#nb_frame {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+    font-size: 2em;
+}
+
+#logo {
+    float: left;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: grey;
+}
+
+#logo div {
+    background-color: red;
+    display: inline;
+    padding-bottom: 4px;
+    border-radius: 4px;
+}
+
+#logo span {
+    color: black;
+}
+
+ul {
+    font-family: "Arial";
+    margin: 0px;
+    margin-right: 10px;
+    padding: 0px;
+    float: right;
+    display: inline-block;
+    list-style-type: none;
+}
+
+li {
+    text-align: center;
+    padding: 14px 12px;
+    float: left;
+    color: grey;
+} 
+
+li a {
+    text-decoration: none;
+    color: grey;
+}
+
+li a:hover {
+    border-top: solid red;
+    color: lightgrey;
+}

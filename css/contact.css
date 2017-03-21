@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    z-index: 0;
+}
+
+#contact_box {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 20vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: black;
+    color: white;
+}
+
+#contact_header {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 4vw;
+    padding-bottom: 50px;
+}
+
+#contact_methods {
+    text-align: center;
+}
+
+#contact_methods div {
+    display: inline-block;
+    font-size: 0.9vw;
+}
+
+#contact_methods img {
+    width: 15vw;
+    height: 15vw;
+    padding: 2px;
+}
+
+#contact_methods a {
+    color: white;
+
+}
