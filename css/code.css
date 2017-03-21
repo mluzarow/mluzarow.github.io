@@ -8,6 +8,7 @@ body {
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 20px;
+    min-width: 700px;
     background-color: #333;
     color: white;
     border: solid 5px #2D2D2D;
