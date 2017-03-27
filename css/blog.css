@@ -1,9 +1,87 @@
 @media all and (max-width: 767px) {
+    /* Desktop navbar */
+    body #nb_frame {
+        display: none;
+    }
+    /* Replacement for the navbar on top (logo with burger) */
+    body #navbar_mobile_frame_top {
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+        width: 100%;
+        display: inline-block;
+        font-size: 21pt;
+    }
+    
+    /* Top bar style */
+    #navbar_mobile_frame_top #logo {
+        float: left;
+        text-decoration: none;
+        padding: 14px 16px;
+        color: grey;
+    }
+    #navbar_mobile_frame_top #logo div {
+        background-color: red;
+        display: inline-block;
+        padding-bottom: 4px;
+        border-radius: 4px;
+    }
+    #navbar_mobile_frame_top #logo span {
+        color: black;
+    }
+    body #navbar_mobile_burg {
+        float:right;
+        display: inline-block;
+        width: 36pt;
+        height: 36pt;
+        padding: 9px 14px;
+    }
+    body #navbar_mobile_burg img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* Side bar style */
+    #navbar_mobile_frame_side {
+        height: 100%;
+        width: 0px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: black;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+    #navbar_mobile_frame_side .navbar_mobile_links {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+    #navbar_mobile_frame_side .navbar_mobile_links:hover {
+        background-color: red;
+    }
+    #navbar_mobile_frame_side #navbar_mobile_close {
+        position: absolute;
+        text-decoration: none;
+        color: red;
+        font-size: 25px;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    
+    
     body #title {
         font-size: 27pt;
         text-align: center;
         margin-left: 0px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
     
     body #comments {
@@ -13,6 +91,11 @@
         width: 100%;
         font-size: 16pt;
     }
+}
+
+/* Hide mobile stuff */
+#navbar_mobile_frame_top {
+    display: none;
 }
 
 body {

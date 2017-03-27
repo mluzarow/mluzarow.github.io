@@ -6,13 +6,14 @@
     
     <link rel="stylesheet" type="text/css" href="../../css/blog.css" media="all">
     <link rel="stylesheet" type="text/css" href="../../css/navbar_z0.css">
-
+    <script type="text/javascript" src="../../js/mobile_navbar.js"></script>
+    
     <title>
         Blog - Tutorials - How to Color Manga
     </title>
 </head>
 <body>
-    <!-- Navbar new -->
+    <!-- Navbar Full -->
     <div id="nb_frame">
         <a id="logo" href="https://mluzarow.github.io">
             m <div>
@@ -30,6 +31,7 @@
             <li>
                 <a href="https://mluzarow.github.io/blog/home">
                     Tutorials
+                </a>
             </li>
             <li>|</li>
             <li>
@@ -56,6 +58,44 @@
                 </a>
             </li>
         </ul>
+    </div>
+    
+    <!-- Navbar Mobile -->
+    <div id="navbar_mobile_frame_top">
+        <a id="logo" href="https://mluzarow.github.io">
+            m <div>
+                <span>{luzarow}</span>
+            </div>
+        </a>
+    
+        <a href="javascript:void(0);" id="navbar_mobile_burg" onclick="navbarMobileOpen ()">
+            <img src="../../img/burg.png">
+        </a>
+    </div>
+
+    
+    <div id="navbar_mobile_frame_side">
+        <a href="javascript:void(0);" id="navbar_mobile_close" onclick="navbarMobileClose ()">
+            &times;
+        </a>
+        <a href="https://mluzarow.github.io/blog/home" class="navbar_mobile_links">
+            Blog
+        </a>
+        <a href="https://mluzarow.github.io/blog/home" class="navbar_mobile_links">
+            Tutorials
+        </a>
+        <a href="https://mluzarow.github.io/apps/home" class="navbar_mobile_links">
+            Apps
+        </a>
+        <a href="https://mluzarow.github.io/snippets/test" class="navbar_mobile_links">
+            Snippets
+        </a>
+        <a href="https://mluzarow.github.io/about" class="navbar_mobile_links">
+            About
+        </a>
+        <a href="https://mluzarow.github.io/contact" class="navbar_mobile_links">
+            Contact
+        </a>
     </div>
     
     <div id="db_spacer_1"></div>
