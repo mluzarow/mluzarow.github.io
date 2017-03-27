@@ -1,0 +1,101 @@
+/* Hide desktop navbar */
+#nb_frame {
+    display: none;
+}
+
+body #navbar_mobile_frame_top {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    width: 100%;
+    display: inline-block;
+    font-size: 21pt;
+}
+
+#logo {
+    float: left;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: grey;
+}
+
+#logo div {
+    background-color: red;
+    display: inline-block;
+    padding-bottom: 4px;
+    border-radius: 4px;
+}
+
+#logo span {
+    color: black;
+}
+
+#navbar_mobile_burg {
+    float:right;
+    display: inline-block;
+    width: 36pt;
+    height: 36pt;
+    padding: 9px 14px;
+}
+
+#navbar_mobile_burg img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Side bar style */
+body #navbar_mobile_frame_side {
+    display: inline;
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.navbar_mobile_links {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.navbar_mobile_links:hover {
+    background-color: red;
+}
+
+#navbar_mobile_close {
+    position: absolute;
+    text-decoration: none;
+    color: red;
+    font-size: 25px;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Spacers */
+#db_spacer_1 {
+    height: 1px;
+    background-color: black;
+    border-bottom: solid red;
+}
+
+#db_spacer_2 {
+    height: 5px;
+    background-color: black;
+}
+
+#db_spacer_3 {
+    height: 15px;
+    background-color: black;
+    border-top: solid red;
+}
