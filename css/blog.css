@@ -42,7 +42,8 @@
     }
     
     /* Side bar style */
-    #navbar_mobile_frame_side {
+    body #navbar_mobile_frame_side {
+        display: inline;
         height: 100%;
         width: 0px;
         position: fixed;
@@ -50,7 +51,7 @@
         top: 0;
         left: 0;
         background-color: black;
-        overflow-x: hidden;
+        overflow: hidden;
         padding-top: 60px;
         transition: 0.5s;
     }
@@ -74,8 +75,7 @@
         right: 25px;
         font-size: 36px;
         margin-left: 50px;
-    }
-    
+    } 
     
     body #title {
         font-size: 27pt;
@@ -95,6 +95,9 @@
 
 /* Hide mobile stuff */
 #navbar_mobile_frame_top {
+    display: none;
+}
+#navbar_mobile_frame_side {
     display: none;
 }
 
