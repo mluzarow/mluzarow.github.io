@@ -1,3 +1,20 @@
+@media all and (max-width: 767px) {
+    body #title {
+        font-size: 27pt;
+        text-align: center;
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+    
+    body #comments {
+        margin: 0px;
+        min-width: 0px;
+        padding-right: 20px;
+        width: 100%;
+        font-size: 16pt;
+    }
+}
+
 body {
     background-color: black;
     margin: 0px;
@@ -24,7 +41,6 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
-    z-index: 0;
 }
 
 #comments a {
