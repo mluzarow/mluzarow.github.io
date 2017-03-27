@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"> 
-    <link rel="stylesheet" type="text/css" href="../css/blog.css">
-    <link rel="stylesheet" type="text/css" href="../css/navbar_z0.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="../css/blog.css" media="all">
 
+    <script type="text/javascript" src="../../js/mobile_navbar.js"></script>
+    
     <title>
         Blog - Home
     </title>
@@ -56,45 +59,46 @@
         </ul>
     </div>
     
+    <!-- Navbar Mobile -->
+    <div id="navbar_mobile_frame_top">
+        <a id="logo" href="https://mluzarow.github.io">
+            m <div>
+                <span>{luzarow}</span>
+            </div>
+        </a>
+        <a href="javascript:void(0);" id="navbar_mobile_burg" onclick="navbarMobileOpen ()">
+            <img src="../../img/burg.png">
+        </a>
+    </div>
+    
+    <div id="navbar_mobile_frame_side">
+        <a href="javascript:void(0);" id="navbar_mobile_close" onclick="navbarMobileClose ()">
+            &times;
+        </a>
+        <a href="https://mluzarow.github.io/blog/home" class="navbar_mobile_links">
+            Blog
+        </a>
+        <a href="https://mluzarow.github.io/blog/home" class="navbar_mobile_links">
+            Tutorials
+        </a>
+        <a href="https://mluzarow.github.io/apps/home" class="navbar_mobile_links">
+            Apps
+        </a>
+        <a href="https://mluzarow.github.io/snippets/test" class="navbar_mobile_links">
+            Snippets
+        </a>
+        <a href="https://mluzarow.github.io/about" class="navbar_mobile_links">
+            About
+        </a>
+        <a href="https://mluzarow.github.io/contact" class="navbar_mobile_links">
+            Contact
+        </a>
+    </div>
+    
+    <!-- General Navbar Spacers -->
     <div id="db_spacer_1"></div>
     <div id="db_spacer_2"></div>
     <div id="db_spacer_3"></div>
-    
-    <div id="sidebar">
-        <div id="sidebar_title">
-            Navigation
-        </div>
-        <div id="sidebar_links">
-            <div>
-                <a href="https://mluzarow.github.io/blog/home">
-                    Home
-                </a>
-            </div>
-            </br>
-            <div class="slideout">
-                <a href="javascript:void(0)">
-                    Not Home >
-                </a>
-                <div class="slideout_content">
-                    <a href="">
-                        Link 1
-                    </a>
-                    <a href="">
-                        Link 2
-                    </a>
-                    <a href="">
-                        Link 3
-                    </a>
-                </div>
-            </div>
-            </br>
-            <div>
-                <a href="">
-                    Third Link
-                </a>
-            </div>
-        </div>
-    </div>
     
     <div id="title">
         Main Page
