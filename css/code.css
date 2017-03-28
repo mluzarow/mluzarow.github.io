@@ -1,3 +1,31 @@
+@import url("navbar_mobile.css") all and (max-width: 767px);
+@import url("navbar_z0.css") all and (min-width: 768px);
+
+@media all and (max-width: 767px) {
+    body #statement {
+        margin: 0px;
+        min-width: 0px;
+    }
+    
+    body #code_tab_box {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    body .code_tab_content {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+/* Hide mobile stuff */
+#navbar_mobile_frame_top {
+    display: none;
+}
+#navbar_mobile_frame_side {
+    display: none;
+}
+
 /* Everything else */
 body {
     background-color: black;
