@@ -13,6 +13,9 @@ window.onload = function () {
     for (var i = 0; i < boxes.length; i++) {
         boxes[i].getElementsByClassName ("project_extender")[0].addEventListener ("mousedown", animate.bind (boxes[i]), false);
     }
+    
+    // Turn off all transitions
+    turnOffTransitions ();
 }
 
 function animate (target) {
