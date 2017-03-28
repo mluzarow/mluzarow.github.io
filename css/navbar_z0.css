@@ -2,7 +2,7 @@
 #nb_frame {
     margin: 0px;
     padding: 0px;
-    font-size: 2em;
+    font-size: 1.8em;
     background-color: black;
     overflow: hidden;
 }
@@ -37,7 +37,7 @@ ul {
 
 li {
     text-align: center;
-    padding: 14px 12px;
+    padding: 14px 6px;
     float: left;
     color: grey;
 } 

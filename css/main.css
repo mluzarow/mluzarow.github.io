@@ -1,3 +1,17 @@
+@import url("navbar_mobile.css") all and (max-width: 767px);
+@import url("navbar_z0.css") all and (min-width: 768px);
+
+@media all and (max-width: 767px) {
+    
+}
+
+/* Hide mobile stuff */
+#navbar_mobile_frame_top {
+    display: none;
+}
+#navbar_mobile_frame_side {
+    display: none;
+}
 
 @keyframes intro_inside {
     from {width: 0em;}
@@ -10,11 +24,11 @@
 
 body {
     margin: 0px;
+    background-color: black;
 }
 
 #r_front {
     position: absolute;
-    height: 100%;
     width: 100%;
     background-color: black;
     z-index: 0;
