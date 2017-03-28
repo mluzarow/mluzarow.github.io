@@ -1,3 +1,22 @@
+@import url("navbar_mobile.css") all and (max-width: 767px);
+@import url("navbar_z0.css") all and (min-width: 768px);
+
+@media all and (max-width: 767px) {
+    body #comments {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 20px;
+    }
+}
+
+/* Hide mobile stuff */
+#navbar_mobile_frame_top {
+    display: none;
+}
+#navbar_mobile_frame_side {
+    display: none;
+}
+
 body {
     background-color: black;
     margin: 0px;
