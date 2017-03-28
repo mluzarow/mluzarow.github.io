@@ -2,6 +2,11 @@
 @import url("navbar_z0.css") all and (min-width: 768px);
 
 @media all and (max-width: 767px) {
+    html body {
+        width: 100%;
+        height: auto;
+    }
+
     body #title {
         font-size: 27pt;
         text-align: center;
@@ -12,9 +17,19 @@
     body #comments {
         margin: 0px;
         min-width: 0px;
-        padding-right: 20px;
+        padding: 0px;
         width: 100%;
         font-size: 16pt;
+        border-radius: none;
+    }
+    
+    #comments .comments_header {
+        padding-left: 15px;
+    }
+    #comments .comments_text {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 25px;
     }
 }
 
