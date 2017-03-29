@@ -133,6 +133,7 @@ body {
     margin-top: 5vw;
     overflow: hidden;
     transition: width 2s;
+    transition-delay: 0s;
 }
 
 .project_image {
@@ -147,41 +148,53 @@ body {
     height: 20vw;
     float: left;
     background-color: grey;
-    overflow: visible;
+    overflow: hidden;
     font-family: "Arial";
+    opacity: 0;
     transition: width 2s;
+    transition-delay: 0s;
 }
 
 .project_title {
     font-size: 2vw;
+    padding-left: 15px;
+    padding-top: 10px;
 }
 
 .project_comments {
     padding-left: 15px;
     padding-right: 10px;
     font-size: 1vw;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 1s, opacity 1s;
-    transition-delay: 2s;
+    height: 14vw;
+    overflow-y: scroll;
+}
+
+.project_links {
+    overflow: hidden;
+    background-color: red;
+    height: 6vw;
+    display: flex;
 }
 
 .project_links a {
+    display: inline-block;
     text-decoration: none;
     color: white;
-    float: left;
     background-color: #333;
-    padding: 10px 10px;
+    font-size: 1.5vw;
+    flex-grow: 1;
+    text-align: center;
+    padding-top: 0.5vw;
 }
 
 .project_links a:hover {
-    color: white;
+    color: black;
     border: none;
-    background-color: dimgrey;
-    
+    background-color: red;
 }
 
 .project_extender {
+    
     float: right;
     background-color: dimgrey;
     height: 20vw;
