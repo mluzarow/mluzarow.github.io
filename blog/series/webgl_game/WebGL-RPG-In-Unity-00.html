@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="../../../css/blog.css" media="all">
+    <script type="text/javascript" async src="../../../js/mobile_navbar.js"></script>
+    
+    <title>
+        Blog - WebGL RPG In Unity - Part 00
+    </title>
+</head>
+<body>
+    <!-- Navbar Full -->
+    <div id="nb_frame">
+        <a id="logo" href="https://mluzarow.github.io">
+            m <div>
+                <span>{luzarow}</span>
+            </div>
+        </a>
+        
+        <ul>
+            <li>
+                <a href="https://mluzarow.github.io/blog/home">
+                    Blog
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://mluzarow.github.io/apps/home">
+                    Apps
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://mluzarow.github.io/snippets/test">
+                    Snippets
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://mluzarow.github.io/about">
+                    About
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://mluzarow.github.io/contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Navbar Mobile -->
+    <div id="navbar_mobile_frame_top">
+        <a id="logo" href="https://mluzarow.github.io">
+            m <div>
+                <span>{luzarow}</span>
+            </div>
+        </a>
+        <a href="javascript:void(0);" id="navbar_mobile_burg" onclick="navbarMobileOpen ()">
+            <img src="../../../img/burg.png">
+        </a>
+    </div>
+    
+    <div id="navbar_mobile_frame_side">
+        <a href="javascript:void(0);" id="navbar_mobile_close" onclick="navbarMobileClose ()">
+            &times;
+        </a>
+        <a href="https://mluzarow.github.io/blog/home" class="navbar_mobile_links">
+            Blog
+        </a>
+        <a href="https://mluzarow.github.io/apps/home" class="navbar_mobile_links">
+            Apps
+        </a>
+        <a href="https://mluzarow.github.io/snippets/test" class="navbar_mobile_links">
+            Snippets
+        </a>
+        <a href="https://mluzarow.github.io/about" class="navbar_mobile_links">
+            About
+        </a>
+        <a href="https://mluzarow.github.io/contact" class="navbar_mobile_links">
+            Contact
+        </a>
+    </div>
+    
+    <!-- General Navbar Spacers -->
+    <div id="db_spacer_1"></div>
+    <div id="db_spacer_2"></div>
+    <div id="db_spacer_3"></div>
+    
+    <!-- Page Content -->
+    <div id="title">
+        WebGL RPG In Unity - Part 00: Starting Up
+    </div>
+    
+    <div id="comments">
+        <div class="comments_header">
+            Introduction
+        </div>
+        <div class="comments_text">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I really enjoy making games. If you are reading this, I'm sure
+            that at some point in your programming career --of whatever length it may be-- you had made some
+            sort of console based game. Perhaps a number guessing game? Maybe something more complex like
+            a choose your own adventure RPG! Whatever your poison, I too enjoyed the art of the text game.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eventually, however, you begin to hunger for bigger and better things.
+            You begin to yearn for graphics. Big and shiny colors and lights to add pizazz to your world. I had
+            gone through a great many different mediums via which to implement this: GameMaker, XNA, Unity,
+            etc. Each differed greatly in complexity and usefulness, but each got me a little bit closer to
+            my goal of making an actual finished playable game.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Still, making a standalone game is one thing but being able to put your
+            game online for everyone to play instantly with no hassle... Now that was attractive. Previously,
+            there was no simple way to do this. You could make a Flash game but then your would have to use Flash;
+            how unfortunate. You could make a Java applet but then nobody would ever touch it. Not so long ago Unity
+            Web games starting getting popular but with them being phased out, that option is gone as well. There is, 
+            though, still a shining light of hope. That is the Unity WebGL game.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So why not try about make a fun, simply RPG for everyone to enjoy online
+            with WebGL?
+            </br>
+            </br>
+        </div>
+        <div class="comments_header">
+            What is WebGL?
+        </div>
+        <div class="comments_text">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In order to start answering that question, we have to go back and ask another
+            question: "What is OpenGL?"
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As this is just a simple blog about the development of a web game, I won't go
+            into detail about OpenGL itself or the graphics pipeline. Rather, a simple overview. OpenGL stands for Open
+            Graphics Library; you can think of it as a graphics drawing API, because that's what it is. When you attempt
+            to draw something to the screen in any capacity, you must call forth the raging power of your video card. Doing
+            that manually is kind of difficult though. Thus, some kinda and possibly frustrated people in the past had
+            created APIs for us which interact with system we are running on to help describe to the hardware how to handle
+            the scene we wish to create.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You may have extrapolated from that the idea that WebGL is a version of OpenGL for
+            web applications. You are correct! WebGL is a graphics API that renders through the fancy HTML5 canvas element,
+            allowing you to make super fancy looking games all in a web browser. The best part is, Unity now supports this
+            vector for games and allows you to built directly for it. That's what we will do. Because it's really cool.
+            </br>
+            </br>
+        </div>
+        <div class="comments_header">
+            The Idea
+        </div>
+        <div class="comments_text">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So what is it exactly that we will be working towards? Well, I don't really know.
+            It's a bit more adventurous that way, don't you think? There are, however, some general bounds for the gameplay
+            we have to put down or we will never get anywhere.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let's begin with movement and camera. We want to have a top down camera, making the game
+            a 2D tile-based top down game. We will allow the player free movement, a bit like the Pokemon games; perhaps this will
+            keep the player from feeling too boxed in (hehehe). What about the purpose; what is the plot? I think it would be fun
+            to play as a healer, so let's do that. The gameplay will center around the offensive and defensive use of a variety
+            of healing, buffing, and manipulation spells in order to overcome battles and change the world around you. A fairly
+            generic item system would be nice as well. We will also need a pretty hefty dialogue system, so we'll add that to
+            the checklist as well.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With a really fast and loose framework for our project down, let's start doodling.
+            </br>
+            </br>
+            <div style="text-align:center;font-size:28px;">
+                <a href="https://mluzarow.github.io/WebGL-RPG-In-Unity-01">Part 01: Collision >></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
