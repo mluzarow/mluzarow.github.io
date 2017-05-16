@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="../../css/blog.css" media="all">
+    <script type="text/javascript" async src="../../js/mobile_navbar.js"></script>
+    
+    <title>
+        Blog - WebGL RPG In Unity - Part 01
+    </title>
+</head>
+<body>
+    <!-- Navbar Full -->
+    <div id="nb_frame">
+        <a id="logo" href="https://mluzarow.github.io">
+            m <div>
+                <span>{luzarow}</span>
+            </div>
+        </a>
+        
+        <ul>
+            <li>
+                <a href="https://mluzarow.github.io/blog/home">
+                    Blog
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://mluzarow.github.io/apps/home">
+                    Apps
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://mluzarow.github.io/snippets/test">
+                    Snippets
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://mluzarow.github.io/about">
+                    About
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://mluzarow.github.io/contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Navbar Mobile -->
+    <div id="navbar_mobile_frame_top">
+        <a id="logo" href="https://mluzarow.github.io">
+            m <div>
+                <span>{luzarow}</span>
+            </div>
+        </a>
+        <a href="javascript:void(0);" id="navbar_mobile_burg" onclick="navbarMobileOpen ()">
+            <img src="../../img/burg.png">
+        </a>
+    </div>
+    
+    <div id="navbar_mobile_frame_side">
+        <a href="javascript:void(0);" id="navbar_mobile_close" onclick="navbarMobileClose ()">
+            &times;
+        </a>
+        <a href="https://mluzarow.github.io/blog/home" class="navbar_mobile_links">
+            Blog
+        </a>
+        <a href="https://mluzarow.github.io/apps/home" class="navbar_mobile_links">
+            Apps
+        </a>
+        <a href="https://mluzarow.github.io/snippets/test" class="navbar_mobile_links">
+            Snippets
+        </a>
+        <a href="https://mluzarow.github.io/about" class="navbar_mobile_links">
+            About
+        </a>
+        <a href="https://mluzarow.github.io/contact" class="navbar_mobile_links">
+            Contact
+        </a>
+    </div>
+    
+    <!-- General Navbar Spacers -->
+    <div id="db_spacer_1"></div>
+    <div id="db_spacer_2"></div>
+    <div id="db_spacer_3"></div>
+    
+    <!-- Page Content -->
+    <div id="title">
+        WebGL RPG In Unity - Part 01: Organization & Movement
+    </div>
+    
+    <div id="comments">
+        <div class="comments_header">
+            Overview
+        </div>
+        <div class="comments_text">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The very first thing we have to do is some general set-up of our workspace. We
+            will place down a few ground rules regarding where and how files should be placed so as to help us find and use
+            stuff in the long term. Once we have that done, we'll get started on implementing a very basic player movement
+            system which will be useful in testing just about everything else we will be adding to the game.
+        </div>
+        <div class="comments_header">
+            The Organization
+        </div>
+        <div class="comments_text">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our file hierarchy will be as follows:
+            </br>
+            <pre>
+            Project
+             |
+             |- Audio
+                 |
+                 |- BGM
+                 |- SFX
+             |- Data
+             |- Materials
+             |- Prefabs
+             |- Scenes
+             |- Scripts
+                 |
+                 |- Utility Classes
+             |- Textures
+            </pre>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Audio:</b>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We will put all of our audio files in here. We'll separate
+            our audio into two folders. "BGM" will be for background music, or longer music tracks that play in the background of
+            a level or scene. "SFX" will be for sound effects, or short clips used for actions sounds such as the casting of a spell
+            or the clang of metal.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Data:</b>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data will be our dumping ground for all the miscellaneous files
+            that have no other place. These include start-up preferences, save files, dialogue storage files, etc.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Materials:</b>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As we will be working mostly with sprites, we will not have any
+            use for materials in the finished product. However, materials are a very quick and easy way to distinguish one object from
+            another. Simply make a material for the player object, pink for instance, and another for some sort of collider and bam! Nice,
+            easy way to keep from confusing your game objects. Since we are not working in a 3D space with proper lighting set up, we will
+            just have to make each material to render as an unlit color to circumvent said issue.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Prefabs:</b>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prefabs are quite useful is setting up a game scene. Essentially, a prefab
+            is a template of a game object. Say you were to create a player object, tricking it out with all the correct scripts, textures, and other
+            such things, and made it into a prefab. Placing this prefab into any scene would be placing an instance of the game object, kind of like
+            reading the object template we had created and plopping down a copy. The bonus is that changing the prefab will also change any game objects
+            that use that prefab, so you would not have to go through and edit every single wall in your scene.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Scenes:</b>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Scripts:</b>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Textures:</b>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </br>
+            </br>
+            <div style="text-align:center;font-size:28px;">
+                <a href="https://mluzarow.github.io/WebGL-RPG-In-Unity-01">&lt;&lt; Part 00: Starting Up</a>
+                |
+                <a href="https://mluzarow.github.io/WebGL-RPG-In-Unity-01">Part 02: Collision &gt;&gt;</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
