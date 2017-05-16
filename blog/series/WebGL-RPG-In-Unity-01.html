@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../../css/blog.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../../css/androidstudio.css">
+    
     <script type="text/javascript" async src="../../js/mobile_navbar.js"></script>
+    <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+    
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
     
     <title>
         Blog - WebGL RPG In Unity - Part 01
@@ -106,6 +113,7 @@
             stuff in the long term. Once we have that done, we'll get started on implementing a very basic player movement
             system which will be useful in testing just about everything else we will be adding to the game.
         </div>
+        
         <div class="comments_header">
             The Organization
         </div>
@@ -115,19 +123,29 @@
             <pre>
             Project
              |
+             |- Art
+                 |
+                 |- Sprites
+                 |- Menu
              |- Audio
                  |
                  |- BGM
                  |- SFX
              |- Data
+             |- Fonts
              |- Materials
              |- Prefabs
              |- Scenes
              |- Scripts
                  |
                  |- Utility Classes
-             |- Textures
             </pre>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Art:</b>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this folder we will put all the images and graphics we will be using in our game.
+            It is split up into two sections. "Sprites" will be for sprite sheets, loose sprites, and animations while "Menu" will hold menu and background art.
+            </br>
+            </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Audio:</b>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We will put all of our audio files in here. We'll separate
@@ -140,6 +158,13 @@
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data will be our dumping ground for all the miscellaneous files
             that have no other place. These include start-up preferences, save files, dialogue storage files, etc.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Fonts:</b>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's a folder for holding fonts, or "typefaces" if you want to be
+            "that guy", to be used in the game. Pretty simple. Unless we want to be stuck with nothing but Arial for the rest of time, it's
+            necessary.
             </br>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Materials:</b>
@@ -162,17 +187,116 @@
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Scenes:</b>
             </br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scenes are files that store game objects. The most easy way to think of them is
+            as levels, or scenes, of a game. They are used to split a game up into smaller, more manageable chunks.
             </br>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Scripts:</b>
             </br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ah, this is the meat of our project: the actual code. We will be splitting our code
+            into a bunch of different controller files. Each controller will be a script that controls some game object. Pretty good right? Beyond that, 
+            we will also need a variety of classes that serve as item templates, ???
             </br>
             </br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Textures:</b>
+        </div>
+        
+        <div class="comments_header">
+            The Movement
+        </div>
+        <div class="comments_text">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With that out of the way, we will create some sort of object that we can move around a scene. We'll initially just make a
+            testing scene, "testScene.unity", (I know; I am very creative) and place a quad right in there. Why a quad? I don't know; I just like quads. Unity 2D is,
+            after all, just Unity 3D with the view edited to be 2D, so why not? Let's also make sure to make that into a player object prefab and stick some material
+            on it.
             </br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now we have a colored square on the screen. The game is almost complete! Our next step is to crack open Visual Studio, or
+            Monodevelop if you are some sort of weirdo, and get, uh, cracking.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So here is our totally black C# file:
+            
+            <pre><code class="cs">
+    using UnityEngine;
+
+    public class playerInput : MonoBehavior {
+        void Start () {
+        
+        }
+        
+        void Update () {
+        
+        }
+    }
+            </code></pre>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The only part of this we will actually need for no is Update (). Update () will trigger on every game frame, which makes it
+            pretty good for minimizing dropped inputs. In order to make our character move, we need to things: the players actual input and then a conversion of that
+            into movement. Simple enough. In order to capture key pressed for movement in a 2D plane, we'll make a vector2D.
+
+            <pre><code class="cs">
+    using UnityEngine;
+
+    public class playerInput : MonoBehavior {
+        public static Vector2 input;
+        
+        void Update () {
+            input = new Vector2 ((Input.GetKey (KeyCode.A) ? -1 : 0) + (Input.GetKey (KeyCode.D) ? 1 : 0),
+                                 (Input.GetKey (KeyCode.W) ? 1 : 0) + (Input.GetKey (KeyCode.S) ? -1 : 0));
+        }
+    }
+            </code></pre>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's a bit of a funky line, so let's break it down. Clearly, we are using standard game input: W for up, S for down, A for left,
+            and D for right. For each direction, we are using a ternary operator to convert that key press into either 0 (no press) or 1 / -1 (press detected). Now, the
+            magic of this statement is that we add the results of opposite sides, like left and right or up and down. If you look top down at a Cartesian plane, you will
+            notice that if you go to the left, you are moving into the negatives with respect to the x axis. Going left, conversely, will lead you into the positives. In
+            Unity, our scene works the same way. If we are pressing A (move left), our sum for the x axis movement (input.x) will be -1 + 0, which is -1. Pressing "move
+            right" will yield 1. Pressing both, however, cancels each other out, getting 0.
+            </br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You have likely already noticed that input is nothing more than a way to convert key pressed into a unit vector. We will use this
+            vector along with some sort of speed variable in order to move at a steady velocity in the requested direction. I've already found a fairly good speed via messing
+            around with the value in the editor, so I will just use that value.
+            
+            <pre><code class="cs">
+    using UnityEngine;
+
+    public class playerInput : MonoBehavior {
+        private float moveSpeed = 3.0f;
+        private Vector2 velocity;
+        
+        public static Vector2 input;
+        
+        void Update () {
+            input = new Vector2 ((Input.GetKey (KeyCode.A) ? -1 : 0) + (Input.GetKey (KeyCode.D) ? 1 : 0),
+                                 (Input.GetKey (KeyCode.W) ? 1 : 0) + (Input.GetKey (KeyCode.S) ? -1 : 0));
+                                 
+            velocity = input * moveSpeed;
+        }
+    }
+            </code></pre>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now that we have a way to store the velocity as well as some sort of speed reference, we must actually turn that into something the
+            game can use to move the player object. In order to do that, we will translate this (this being the object the script is attached to) by the total distance the
+            object would travel in the time frame of each frame.
+            
+            <pre><code class="cs">
+    using UnityEngine;
+
+    public class playerInput : MonoBehavior {
+        private float moveSpeed = 3.0f;
+        private Vector2 velocity;
+        
+        public static Vector2 input;
+        
+        void Update () {
+            input = new Vector2 ((Input.GetKey (KeyCode.A) ? -1 : 0) + (Input.GetKey (KeyCode.D) ? 1 : 0),
+                                 (Input.GetKey (KeyCode.W) ? 1 : 0) + (Input.GetKey (KeyCode.S) ? -1 : 0));
+                                 
+            velocity = input * moveSpeed;
+            this.transform.Translate (velocity * Time.deltaTime);
+        }
+    }
+            </code></pre>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Just slap that on the player prefab and there we are: a moving square! Extremely exciting.
             </br>
             </br>
             <div style="text-align:center;font-size:28px;">
