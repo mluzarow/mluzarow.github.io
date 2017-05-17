@@ -24,19 +24,39 @@ window.onload = function () {
 function animate (target) {
     // Check screen size to see if we are mobile or desktop
     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    
+    /*
+    // We are on mobile
     if (w <= 767) {
         // Check id to get open / closed status
         if (this.id == "closed") {
-            this.getElementsByClassName ("project_info")[0].style.height = "auto";
+        
+            // Transition Properties
+            this.style.transition = "height 1s";
+            this.getElementsByClassName ("project_info")[0].style.transition = "height 0s, opacity 0.7s";
+        
+            // Transition Delays
+            this.style.transitionDelay = "0s";
+            this.getElementsByClassName ("project_info")[0].style.transitionDelay = "1s";
             
+            // Misc Variables
+            this.getElementsByClassName ("project_extender")[0].innerHTML = "^";
             this.id = "open";
+            
+            // Transition Variables
+            this.style.height = "40vh";
+            this.getElementsByClassName ("project_info")[0].style.height = "20vh";
+            this.getElementsByClassName ("project_info")[0].style.opacity = 1;
+            
+            
         } else {
             this.getElementsByClassName ("project_info")[0].style.height = "0px";
             
             this.id = "closed";
         }
-    } else {
+        
+    // We are on desktop
+    } else {*/
+    if (w > 767) {
         // Check id to get open / closed status
         if (this.id == "closed") {
             // WARNING: transition property MUST go before transitionDelay or it will
