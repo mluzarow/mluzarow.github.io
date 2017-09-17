@@ -1,0 +1,56 @@
+@import url("navbar_mobile.css") all and (max-width: 767px);
+@import url("navbar_z0.css") all and (min-width: 768px);
+
+/* Hide mobile stuff */
+#navbar_mobile_frame_top {
+    display: none;
+}
+#navbar_mobile_frame_side {
+    display: none;
+}
+
+/* Everything else */
+body {
+    background-color: black;
+    margin: 0px;
+}
+
+#content_list {
+    padding-top: 20px;
+    border-radius: 10px;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#content_list a {
+    color: red;
+}
+
+#content_megaheader {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Arial";
+    font-weight: bold;
+}
+
+.content_logo {
+    margin: 3% 0;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.content_logo img {
+    margin: 0 auto;
+    width: 33%;
+    display: block;
+}
+
+.content_container {
+    margin: 0 auto;
+    width: 98%;
+    height: 0;
+    border-top: 1px solid red;
+    box-sizing: border-box;
+}
