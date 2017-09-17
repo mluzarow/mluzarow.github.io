@@ -7,25 +7,25 @@
     overflow: hidden;
 }
 
-#logo {
+#nb_frame #logo {
     float: left;
     text-decoration: none;
     padding: 14px 16px;
     color: grey;
 }
 
-#logo div {
+#nb_frame #logo div {
     background-color: red;
     display: inline-block;
     padding-bottom: 4px;
     border-radius: 4px;
 }
 
-#logo span {
+#nb_frame #logo span {
     color: black;
 }
 
-ul {
+#nb_frame ul {
     font-family: "Arial";
     margin: 0px;
     margin-right: 10px;
@@ -35,19 +35,19 @@ ul {
     list-style-type: none;
 }
 
-li {
+#nb_frame ul li {
     text-align: center;
     padding: 14px 7px;
     float: left;
     color: grey;
-} 
+}
 
-li a {
+#nb_frame ul li a {
     text-decoration: none;
     color: grey;
 }
 
-li a:hover {
+#nb_frame ul li a:hover {
     border-top: solid red;
     color: lightgrey;
 }
@@ -69,4 +69,3 @@ li a:hover {
     background-color: black;
     border-top: solid red;
 }
-
