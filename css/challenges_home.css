@@ -19,8 +19,6 @@ body {
     padding-top: 20px;
     border-radius: 10px;
     color: white;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 #content_list a {
@@ -49,8 +47,63 @@ body {
 
 .content_container {
     margin: 0 auto;
-    width: 98%;
-    height: 0;
-    border-top: 1px solid red;
     box-sizing: border-box;
+}
+
+.content_subcontainer {
+    position: relative;
+}
+
+.content_side_title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: rotateZ(-90deg) translate(0, -100%);
+    font-family: "Arial";
+    font-size: 4vw;
+}
+
+.content_topic {
+    padding: 0 0 0 5%;
+    width: 44%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.content_topic ul li .topic_caret {
+    position: absolute;
+    right: 10px;
+}
+
+.content_topic ul {
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.content_topic ul li {
+    padding: 15px 0 15px 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.content_topic ul li:hover {
+    background-color: red;
+}
+
+.content_topic .topic_title {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+}
+
+@media screen and (max-width : 768px) {
+    .content_side_title {
+        font-size: 6vw;
+    }
+
+    .content_topic {
+        width: 93%;
+        padding-left: 7%;
+    }
 }
