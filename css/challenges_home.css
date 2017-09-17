@@ -15,6 +15,7 @@ body {
     margin: 0px;
 }
 
+/* -------- Page orientation -------- */
 #content_list {
     padding-top: 20px;
     border-radius: 10px;
@@ -32,6 +33,7 @@ body {
     font-weight: bold;
 }
 
+/* -------- Each site's data -------- */
 .content_logo {
     margin: 3% 0;
     width: 100%;
@@ -50,6 +52,7 @@ body {
     box-sizing: border-box;
 }
 
+/* -------- HackerRank domains -------- */
 .content_subcontainer {
     position: relative;
 }
@@ -63,6 +66,7 @@ body {
     font-size: 4vw;
 }
 
+/* -------- Specific domain's topic -------- */
 .content_topic {
     padding: 0 0 0 5%;
     width: 44%;
@@ -70,11 +74,14 @@ body {
     vertical-align: top;
 }
 
-.content_topic ul li .topic_caret {
-    position: absolute;
-    right: 10px;
+.content_topic .topic_title {
+    display: block;
+    text-align: center;
+    font-size: 2em;
 }
 
+
+/* -------- Topic subtopics -------- */
 .content_topic ul {
     padding: 0;
     list-style: none;
@@ -82,19 +89,44 @@ body {
 }
 
 .content_topic ul li {
-    padding: 15px 0 15px 10px;
     position: relative;
     cursor: pointer;
 }
 
-.content_topic ul li:hover {
+/* -------- Dropdown button -------- */
+.content_topic ul .dropdown_button {
+    padding: 8px 0 8px 10px;
+}
+
+.content_topic ul .dropdown_button:hover {
     background-color: red;
 }
 
-.content_topic .topic_title {
+.content_topic ul .dropdown_button .topic_caret {
+    position: absolute;
+    right: 10px;
+}
+
+/* -------- Dropdown content -------- */
+.content_topic .dropdown_content {
+    margin-left: 30px;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 1s;
+    transition-delay: 0s;
+}
+
+.content_topic .dropdown_content a {
     display: block;
-    text-align: center;
-    font-size: 2em;
+}
+
+.content_topic .open .dropdown_button .topic_caret {
+    transform: rotateZ(90deg);
+}
+
+.content_topic .open .dropdown_content {
+    height: auto;
 }
 
 @media screen and (max-width : 768px) {
