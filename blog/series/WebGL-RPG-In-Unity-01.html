@@ -244,7 +244,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's a bit of a funky line, so let's break it down. Clearly, we are using standard game input: W for up, S for down, A for left,
             and D for right. For each direction, we are using a ternary operator to convert that key press into either 0 (no press) or 1 / -1 (press detected). Now, the
             magic of this statement is that we add the results of opposite sides, like left and right or up and down. If you look top down at a Cartesian plane, you will
-            notice that if you go to the left, you are moving into the negatives with respect to the x axis. Going left, conversely, will lead you into the positives. In
+            notice that if you go to the left, you are moving into the negatives with respect to the x axis. Going right, conversely, will lead you into the positives. In
             Unity, our scene works the same way. If we are pressing A (move left), our sum for the x axis movement (input.x) will be -1 + 0, which is -1. Pressing "move
             right" will yield 1. Pressing both, however, cancels each other out, getting 0.
             </br>
