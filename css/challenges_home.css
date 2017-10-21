@@ -106,7 +106,6 @@ body {
     right: 10px;
 }
 
-/* -------- Dropdown content -------- */
 .content_topic .dropdown_button.selected {
     background-color: red;
 }
@@ -115,6 +114,7 @@ body {
     transform: rotateZ(90deg);
 }
 
+/* -------- Dropdown content -------- */
 .content_topic .dropdown_content {
     width: 100%;
     height: 0;
@@ -137,6 +137,11 @@ body {
     color: #000;
 }
 
+.content_topic .dropdown_content .link_wrap:hover .language {
+    background-color: #000;
+    color: #fff;
+}
+
 #content_list .content_topic .dropdown_content .link_wrap:hover a {
     color: #000;
 }
@@ -145,6 +150,20 @@ body {
     width: 40px;
     float: left;
     text-align: center;
+}
+
+.content_topic ul .dropdown_content .language_wrap {
+    position: relative;
+    top: -1px;
+    float: right;
+}
+
+.content_topic ul .dropdown_content .language_wrap .language {
+    margin: 0 4px;
+    padding: 1px 5px;
+    float: right;
+    background-color: red;
+    border-radius: 4px;
 }
 
 .content_topic .dropdown_content a {
