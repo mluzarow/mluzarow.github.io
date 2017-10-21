@@ -107,6 +107,10 @@ body {
 }
 
 /* -------- Dropdown content -------- */
+.content_topic .dropdown_button.selected .topic_caret {
+    transform: rotateZ(90deg);
+}
+
 .content_topic .dropdown_content {
     margin-left: 30px;
     width: 100%;
@@ -116,16 +120,12 @@ body {
     transition-delay: 0s;
 }
 
+.content_topic .dropdown_content.open {
+    height: auto;
+}
+
 .content_topic .dropdown_content a {
     display: block;
-}
-
-.content_topic .open .dropdown_button .topic_caret {
-    transform: rotateZ(90deg);
-}
-
-.content_topic .open .dropdown_content {
-    height: auto;
 }
 
 @media screen and (max-width : 768px) {
