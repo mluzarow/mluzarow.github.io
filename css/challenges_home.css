@@ -43,6 +43,7 @@ body {
 .content_logo img {
     margin: 0 auto;
     width: 33%;
+    min-width: 200px;
     display: block;
 }
 
@@ -182,5 +183,11 @@ body {
     .content_topic {
         width: 93%;
         padding-left: 7%;
+    }
+}
+
+@media screen and (max-width : 500px) {
+    #content_megaheader {
+        font-size: 35px;
     }
 }
