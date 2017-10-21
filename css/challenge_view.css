@@ -1,0 +1,22 @@
+@import url("navbar_mobile.css") all and (max-width: 767px);
+@import url("navbar_z0.css") all and (min-width: 768px);
+
+/* Hide mobile stuff */
+#navbar_mobile_frame_top {
+    display: none;
+}
+#navbar_mobile_frame_side {
+    display: none;
+}
+
+/* Everything else */
+body {
+    background-color: black;
+    margin: 0px;
+}
+
+/* ========= challenge_view.css ========= */
+#code_box {
+    color: #fff;
+    font-size: 16px;
+}
