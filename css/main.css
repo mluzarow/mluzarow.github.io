@@ -25,6 +25,8 @@ body {
     flex: 1;
     background-color: red;
     text-align: center;
+    transition: bottom 2s;
+    transition-delay: 0s;
 }
 
 .item_box:hover {
@@ -68,4 +70,9 @@ body {
     display: block;
     border-top: 2px solid black;
     content: '';
+}
+
+.item_box .item_text {
+    margin: 0 10px;
+    font-family: "Arial";
 }
