@@ -1,36 +1,35 @@
-// function echo(content) {
-//     var e = docment.createElement("p");
-//     e.innerHTML = content;
-//     e.hidden = true;
-//     document.currentScript.parentElement.replaceChild(document.currentScript, e);
-// }
-function renderTemplate (content) {
+/**
+ * Replaces received template data with the element using the tag ID.
+ *
+ * @param  {string} content Text content of the HTML template.
+ * @param  {string} tag     The ID tag of the script to be replaced with template
+ *                          data.
+ */
+function renderTemplate (content, tag) {
+    var target = document.getElementById (tag);
+
     // Check for null input
     if (content === null) {
         // Failure
         var errorElement = document.createElement ("span");
         errorElement.style.color = "red";
         errorElement.innerHTML = "ERROR: Could not render requested template.";
-        document.currentScript.parentElement.replaceChild (
-            document.currentScript,
-            errorElement
-        );
+        target.outerHTML = errorElement;
 
         return;
     }
-    
-    var wrap = document.createElement ("div");
-    wrap.innerHTML = content;
-    document.currentScript.parentElement.replaceChild (
-        document.currentScript,
-        wrap
-    );
+
+    target.outerHTML = content;
 }
 
 /**
  * Gets the text content of a requested local file by file name.
+ *
+ * @param {string} filename The filename of the template to be used.
+ * @param {string} tag      The ID tag of the script to be replaced with template
+ *                          data.
  */
-function requestTemplate (fileName) {
+function requestTemplate (fileName, tag) {
     // Create new request
     var resp = new XMLHttpRequest ();
 
@@ -41,11 +40,11 @@ function requestTemplate (fileName) {
             // Success
             if (resp.status == 200) {
                 // Send response text to helper
-                renderTemplate (resp.responseText);
+                renderTemplate (resp.responseText, tag);
             // Fail
             } else {
-                // Send null (failure) to helper
-                renderTemplate (null);
+                // Send null (failure) to helperS
+                renderTemplate (null, tag);
             }
         }
     };
