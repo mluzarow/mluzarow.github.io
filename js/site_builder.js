@@ -33,6 +33,12 @@ function requestTemplate (fileName, tag) {
     // Create new request
     var resp = new XMLHttpRequest ();
 
+    if (window.location.hostname === "mluzarow.github.io") {
+    } else {
+        console.log ("The site builder cannot be used on pages outside the mluzarow.github.io host.");
+        return;
+    }
+
     // Event trigger on response answer received or timeout
     resp.onreadystatechange = function() {
         // Answer received
@@ -50,6 +56,6 @@ function requestTemplate (fileName, tag) {
     };
 
     // Send request
-    resp.open ("GET", fileName);
+    resp.open ("GET", fileLocation);
     resp.send ();
 }
