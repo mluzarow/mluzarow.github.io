@@ -34,6 +34,7 @@ function requestTemplate (fileName, tag) {
     var resp = new XMLHttpRequest ();
 
     if (window.location.hostname === "mluzarow.github.io") {
+        var fileLocation = "https://mluzarow.github.io/templates/" + fileName + ".html";
     } else {
         console.log ("The site builder cannot be used on pages outside the mluzarow.github.io host.");
         return;
