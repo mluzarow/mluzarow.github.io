@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../../css/blog.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../../css/androidstudio.css">
+
+    <script type = "text/javascript" src = "../../js/site_builder.js"></script>
+    <script type="text/javascript" async src="../../js/mobile_navbar.js"></script>
+    <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <title>
+        Blog - WebGL RPG In Unity - Part 02
+    </title>
+</head>
+<body>
+    <!-- Navbar Desktop -->
+    <br id = "template-navbar" />
+
+    <!-- Navbar Mobile -->
+    <br id = "template-navbar_mobile" />
+
+    <!-- General Navbar Spacers -->
+    <br id = "template-spacer_bars" />
+
+    <!-- Page Content -->
+    <div id="title">
+        WebGL RPG In Unity - Part 02: Collision
+    </div>
+
+    <div id="comments">
+        <div class="comments_header">
+            Overview
+        </div>
+        <div class="comments_text">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our original idea was a top-down, free movement RPG. Therefore, we will need some way to detect collisions.
+            Since we have given the player free 2D movement, we will need to be able to detect collisions from all four cardinal directions at any time.
+            In order to make the collision system easy to apply to almost any gameplay scenario, we will be using ray casting.
+        </div>
+
+        <div class="comments_header">
+            What is Ray Casting?
+        </div>
+        <div class="comments_text">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As has been the standard thus far, we will begin by looking a bit deeper into the methods and systems we will be
+            using. Simply put, ray casting is exactly what it sounds like. Imagine a game object; make it a square in for simplicity. Now imagine that square
+            shooting a little line segment out the top (that is, in the +y direction). Much like a creepy crawly bug's little antenna, the line segment will
+            act as a sensor, giving information regard whether or not any foreign object has coincided with that line segment. Every frame we will shoot one
+            out a short distance and check if something is there. If there's nothing, we move on. If there is something that we deem a collide-able object,
+            we do whatever we need to do to keep the square from flying through. That's all there is to it!
+        </div>
+
+        <div class="comments_header">
+            The Ray Casting System
+        </div>
+        <div class="comments_text">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are going to split the collision detection system into a manager and an actual ray caster. The manager will, as
+            the name suggest, manage information received from the ray caster coupled with inputs that the player has currently given to manipulate the
+            player object.
+
+            <div style="text-align:center;font-size:28px;">
+                <a href="https://mluzarow.github.io/blog/series/WebGL-RPG-In-Unity-01">&lt;&lt; Part 01: Organization & Movement</a>
+                |
+                <a href="https://mluzarow.github.io/blog/series/WebGL-RPG-In-Unity-03">Part 03: Camera &gt;&gt;</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

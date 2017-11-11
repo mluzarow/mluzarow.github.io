@@ -1,3 +1,18 @@
+// Run the builder once the page loads
+window.addEventListener("load", function() {
+    // Get every <br> tag
+    var brs = document.getElementsByTagName ("br");
+
+    // Check tag IDs for valid template IDs
+    for (var i = 0; i < brs.length; i++) {
+        var start = brs[i].id.indexOf ("template-");
+
+        if (start > -1) {
+            requestTemplate (brs[i].id.substr (start + 9, brs[i].id.length - 8), brs[i].id);
+        }
+    }
+}, false);
+
 /**
  * Replaces received template data with the element using the tag ID.
  *
@@ -25,7 +40,7 @@ function renderTemplate (content, tag) {
 /**
  * Gets the text content of a requested local file by file name.
  *
- * @param {string} filename The filename of the template to be used.
+ * @param {string} filename The name of the template to be used.
  * @param {string} tag      The ID tag of the script to be replaced with template
  *                          data.
  */
@@ -33,11 +48,12 @@ function requestTemplate (fileName, tag) {
     // Create new request
     var resp = new XMLHttpRequest ();
 
-    if (window.location.hostname === "mluzarow.github.io") {
-        var fileLocation = "https://mluzarow.github.io/templates/" + fileName + ".html";
+    // Check the hostname; if there is none, page is in debug mode.
+    if (window.location.hostname === "") {
+        console.log ("Sitebuilder in debug mode targetting [" + fileName + "].");
+        var fileLocation = "file:///C:/Users/Mark/Desktop/Github Repo Clones/mluzarow.github.io/templates/" + fileName + ".html";
     } else {
-        console.log ("The site builder cannot be used on pages outside the mluzarow.github.io host.");
-        return;
+        var fileLocation = "https://mluzarow.github.io/templates/" + fileName + ".html";
     }
 
     // Event trigger on response answer received or timeout
@@ -58,5 +74,6 @@ function requestTemplate (fileName, tag) {
 
     // Send request
     resp.open ("GET", fileLocation);
+    resp.overrideMimeType("text/plain")
     resp.send ();
 }
