@@ -3,96 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" type="text/css" href="../../css/blog.css" media="all">
-    
+
+    <script type = "text/javascript" src = "../../js/site_builder.js"></script>
     <script type="text/javascript" async src="../../js/mobile_navbar.js"></script>
     <script type="text/javascript" async src="../../external/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    
+
     <title>
         Blog - Tutorials - Vectors Introduction
     </title>
 </head>
 <body>
-    <!-- Navbar new -->
-    <div id="nb_frame">
-        <a id="logo" href="https://mluzarow.github.io">
-            m <div>
-                <span>{luzarow}</span>
-            </div>
-        </a>
-        
-        <ul>
-            <li>
-                <a href="https://mluzarow.github.io/blog/home">
-                    Blog
-                </a>
-            </li>
-            <li>|</li>
-            <li>
-                <a href="https://mluzarow.github.io/apps/home">
-                    Apps
-                </a>
-            </li>
-            <li>|</li>
-            <li>
-                <a href="https://mluzarow.github.io/snippets/home">
-                    Snippets
-                </a>
-            </li>
-            <li>|</li>
-            <li>
-                <a href="https://mluzarow.github.io/about">
-                    About
-                </a>
-            </li>
-            <li>|</li>
-            <li>
-                <a href="https://mluzarow.github.io/contact">
-                    Contact
-                </a>
-            </li>
-        </ul>
-    </div>
-    
+    <!-- Navbar Desktop -->
+    <br id = "template-navbar" />
+
     <!-- Navbar Mobile -->
-    <div id="navbar_mobile_frame_top">
-        <a id="logo" href="https://mluzarow.github.io">
-            m <div>
-                <span>{luzarow}</span>
-            </div>
-        </a>
-        <a href="javascript:void(0);" id="navbar_mobile_burg" onclick="navbarMobileOpen ()">
-            <img src="../../img/burg.png">
-        </a>
-    </div>
-    
-    <div id="navbar_mobile_frame_side">
-        <a href="javascript:void(0);" id="navbar_mobile_close" onclick="navbarMobileClose ()">
-            &times;
-        </a>
-        <a href="https://mluzarow.github.io/blog/home" class="navbar_mobile_links">
-            Blog
-        </a>
-        <a href="https://mluzarow.github.io/apps/home" class="navbar_mobile_links">
-            Apps
-        </a>
-        <a href="https://mluzarow.github.io/snippets/home" class="navbar_mobile_links">
-            Snippets
-        </a>
-        <a href="https://mluzarow.github.io/about" class="navbar_mobile_links">
-            About
-        </a>
-        <a href="https://mluzarow.github.io/contact" class="navbar_mobile_links">
-            Contact
-        </a>
-    </div>
-    
+    <br id = "template-navbar_mobile" />
+
     <!-- General Navbar Spacers -->
-    <div id="db_spacer_1"></div>
-    <div id="db_spacer_2"></div>
-    <div id="db_spacer_3"></div>
-    
+    <br id = "template-spacer_bars" />
+
     <div id="title">
         The Amazing World of Vectors
     </div>
@@ -130,7 +61,7 @@
             </br>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here's our number line, spanning -6 to 6 because that's
-            the way it came out; don't complain. Using this, we'll draw three different vectors: 
+            the way it came out; don't complain. Using this, we'll draw three different vectors:
             </br>
             </br>
 <pre>
@@ -152,28 +83,28 @@
             </br>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vector 2 is shorter, being only 2 units; therefore it must
-            be drawn shorter to illustrate this difference. All good so far. 
+            be drawn shorter to illustrate this difference. All good so far.
             </br>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vector 3 has the same length as vector 2 (2 units), but is
             going in the negative direction. Vector 3 spans from 0 to -2, a total of 2 units. Notice
             that the magnitude is the absolute value of the number on the number line; the length of
             a vector cannot be negative, that doesn't make sense. A line draw from 0 to -2 is still
-            a line of length 2 units, right? 
+            a line of length 2 units, right?
             </br>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That being said, sharp-eye'd cookies maybe question "Why
             is it that each of these vectors begins at the origin (0)? Would a vector spanning from
             1 to 6 still have a magnitude of 5, the same as if it were to span from 0 to 5?" That is
             correct! A vector does not have to begin at the origin as the vector itself holds no
-            information on where it begins, only that of it's magnitude and direction. 
+            information on where it begins, only that of it's magnitude and direction.
             </br>
             </br>
             <img src="../../img/tutorials/The-Amazing-World-of-Vectors_number_line_highlight_2.png" style="margin:auto; display:block;">
             </br>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That's right; every vector draw above is vector #1. Every
-            example has a magnitude of 5 and a positive direction. 
+            example has a magnitude of 5 and a positive direction.
             </br>
             </br>
         </div>
@@ -182,7 +113,7 @@
         </div>
         <div class="comments_text">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now that we know how to draw a vector, let's look at
-            vector notation. That is, how to organized a vector's data in a readable form. 
+            vector notation. That is, how to organized a vector's data in a readable form.
             </br>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vectors tend to have variable names, much like angles,
@@ -287,7 +218,7 @@
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So how do you know this is actually the unit vector of
             \(\vec{a}\) and not some random value? Well, we can check our math as unit vectors always
-            have a magnitude of exactly 1. 
+            have a magnitude of exactly 1.
             </br>
             </br>
             \[\|\hat{a}\|=\sqrt{(\frac{1}{\sqrt{2}})^2 + (\frac{1}{\sqrt{2}})^2} = 1\]
@@ -323,7 +254,7 @@
             </br>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Try and change the order in which the vectors are placed
-            tip-to-tail; you'll see that the resulting vector is the same every time! 
+            tip-to-tail; you'll see that the resulting vector is the same every time!
             </br>
             </br>
             <span style="font-size: 28px;">::Visual Subtraction</span>
@@ -388,7 +319,7 @@
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our scalar in this case is the value 2.  We are multiplying
             the vector \(\vec{a}\) by 2, and in doing so multiplying each of the vector's values by 2.
-            This scales the vector by 2. Of course, this makes the vector longer in the end. 
+            This scales the vector by 2. Of course, this makes the vector longer in the end.
             </br>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is also possible to scale the vector down, or otherwise
@@ -518,7 +449,7 @@
             </br>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The first way is the right hand rule. There are plenty
-            of pictures on hand to do that so go look at those.  
+            of pictures on hand to do that so go look at those.
             </br>
             </br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The second is to find the unit vector \(\hat{n}\). This is
