@@ -96,9 +96,6 @@ function testWriteNavLinks () {
     write("");
     write("");
 
-    var Dstyle = "style = \"text-align: center;\"";
-    var Pstyle = "style = \"margin: 0;\"";
-
     var cnt = [
         String.raw`+=========================+   +=========================+   +=========================+`,
         String.raw`|                         |   |                         |   |                         |`,
@@ -113,40 +110,54 @@ function testWriteNavLinks () {
         String.raw`+=========================+   +=========================+   +=========================+`,
     ];
     var cntLink = [
-        "                           ",
-        " ========================= ",
-        " =                       = ",
-        " =                       = ",
-        " =                       = ",
-        " =                       = ",
-        " =                       = ",
-        " =                       = ",
-        " =                       = ",
-        " =                       = ",
-        " =                       = ",
-        " ========================= ",
-        "                           "
+        String.raw`                           `,
+        String.raw` ========================= `,
+        String.raw` =                       = `,
+        String.raw` =                       = `,
+        String.raw` =                       = `,
+        String.raw` =                       = `,
+        String.raw` =                       = `,
+        String.raw` =                       = `,
+        String.raw` =                       = `,
+        String.raw` ========================= `,
+        String.raw`                           `,
     ];
-    var Astyle = "style = \"position: relative; top: 0; height: 100%; \"";
+
     var Aclass = "class = \"nav-hover\"";
+    var Dclass = "class = \"output-line\"";
+    var Pclass = "class = \"formatted-text\"";
+
     output.innerHTML +=
         "<div id = \"anchor\">" +
-            "<div " + Dstyle + "><pre " + Pstyle + ">" + cnt[0] + "</pre></div>" +
-            "<div " + Dstyle + "><pre " + Pstyle + ">" + cnt[1] + "</pre></div>" +
-            "<div " + Dstyle + "><pre " + Pstyle + ">" + cnt[2] + "</pre></div>" +
-            "<div " + Dstyle + "><pre " + Pstyle + ">" + cnt[3] + "</pre></div>" +
-            "<div " + Dstyle + "><pre " + Pstyle + ">" + cnt[4] + "</pre></div>" +
-            "<div " + Dstyle + "><pre " + Pstyle + ">" + cnt[5] + "</pre></div>" +
-            "<div " + Dstyle + "><pre " + Pstyle + ">" + cnt[6] + "</pre></div>" +
-            "<div " + Dstyle + "><pre " + Pstyle + ">" + cnt[7] + "</pre></div>" +
-            "<div " + Dstyle + "><pre " + Pstyle + ">" + cnt[8] + "</pre></div>" +
-            "<div " + Dstyle + "><pre " + Pstyle + ">" + cnt[9] + "</pre></div>" +
-            "<div " + Dstyle + "><pre " + Pstyle + ">" + cnt[10] + "</pre></div>" +
-            "<div " + Astyle + " " + Aclass + "><pre " + Pstyle + "></pre></div>" +
-            "<div " + Astyle + " " + Aclass + "><pre " + Pstyle + "></pre></div>" +
-            "<div " + Astyle + " " + Aclass + "><pre " + Pstyle + "></pre></div>" +
+            "<a " + Aclass + " href=\"https://mluzarow.github.io\"><pre " + Pclass + "></pre></a>" +
+            "<a " + Aclass + " href=\"https://mluzarow.github.io\" style=\"margin-left:240px\"><pre " + Pclass + "></pre></a>" +
+            "<a " + Aclass + " href=\"https://mluzarow.github.io\" style=\"margin-left:480px\"><pre " + Pclass + "></pre></a>" +
+            "<div " + Dclass + "><pre " + Pclass + ">" + cnt[0] + "</pre></div>" +
+            "<div " + Dclass + "><pre " + Pclass + ">" + cnt[1] + "</pre></div>" +
+            "<div " + Dclass + "><pre " + Pclass + ">" + cnt[2] + "</pre></div>" +
+            "<div " + Dclass + "><pre " + Pclass + ">" + cnt[3] + "</pre></div>" +
+            "<div " + Dclass + "><pre " + Pclass + ">" + cnt[4] + "</pre></div>" +
+            "<div " + Dclass + "><pre " + Pclass + ">" + cnt[5] + "</pre></div>" +
+            "<div " + Dclass + "><pre " + Pclass + ">" + cnt[6] + "</pre></div>" +
+            "<div " + Dclass + "><pre " + Pclass + ">" + cnt[7] + "</pre></div>" +
+            "<div " + Dclass + "><pre " + Pclass + ">" + cnt[8] + "</pre></div>" +
+            "<div " + Dclass + "><pre " + Pclass + ">" + cnt[9] + "</pre></div>" +
+            "<div " + Dclass + "><pre " + Pclass + ">" + cnt[10] + "</pre></div>" +
         "</div>"
     ;
+
+    var hovers = document.getElementsByClassName ("nav-hover");
+    var hover_pre = [];
+
+    for (var i = 0; i < hovers.length; i++) {
+        hover_pre.push (hovers[i].getElementsByClassName ("formatted-text")[0]);
+    }
+
+    for (var i = 0; i < hover_pre.length; i++) {
+        for (var j = 0; j < cntLink.length; j++) {
+            hover_pre[i].innerHTML += cntLink[j] + "</br>";
+        }
+    }
        // competition pro
 //
 //             __

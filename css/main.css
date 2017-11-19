@@ -58,3 +58,34 @@ body {
     border: none;
     box-sizing: border-box;
 }
+
+#anchor {
+    margin: 0 auto;
+    width: 700px;
+}
+
+.output-line {
+    text-align: center;
+}
+
+.formatted-text {
+    margin: 0;
+}
+
+.nav-hover {
+    position: absolute;
+    width: 222px;
+    height: 160px;
+    text-decoration: none;
+    z-index: 3;
+}
+
+.nav-hover .formatted-text {
+    cursor: pointer;
+    color: green;
+    visibility: hidden;
+}
+
+.nav-hover:hover .formatted-text {
+    visibility: visible;
+}
