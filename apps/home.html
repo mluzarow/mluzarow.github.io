@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="stylesheet" type="text/css" href="../css/apps.css" media="all">
-
+    
     <script type = "text/javascript" src = "../js/site_builder.js"></script>
     <script type="text/javascript" async src="../js/mobile_navbar.js"></script>
     <script type="text/javascript" src="../js/appBoxes.js"></script>
-
+    
     <script>
+        // Script setup
         window.onload = function () {
+            SiteBuilder.initialize ();
             AppBoxController.initialize ();
         }
     </script>
-
+    
     <title>Apps - Home</title>
 </head>
 <body>
