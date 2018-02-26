@@ -113,99 +113,54 @@ body {
     padding: 0px;
 }
 
-#column_1 {
-    
-    height: auto;
-    width: 49%;
-    display: inline-block;
+.grid_row {
+	padding: 5px;
+	width: 100%;
+	display: flex;
+	flex: 1;
+	box-sizing: border-box;
 }
 
-#column_2 {
-    height: auto;
-    width: 50%;
-    display: inline-block;
+.grid_row.main_row {
+	height: 25em;
 }
 
-.project_box {
-    position: static;
-    background-color: black;
-    width: 22vw;
-    height: 20vw;
-    border-radius: 10px;
-    border: solid dimgrey;
-    margin-left: 1vw;
-    margin-top: 5vw;
-    overflow: hidden;
-    transition: width 2s;
-    transition-delay: 0s;
+.grid_column {
+	display: flex;
+	flex-direction: column;
 }
 
-.project_image {
-    position: static;
-    float: left;
-    width: 20vw;
-    height: 20vw;
+.w-15 {
+	flex: 15;
 }
 
-.project_info {
-    width: 0vw;
-    height: 20vw;
-    float: left;
-    background-color: grey;
-    overflow: hidden;
-    font-family: "Arial";
-    opacity: 0;
-    transition: width 2s;
-    transition-delay: 0s;
+.w-20 {
+	flex: 20;
 }
 
-.project_title {
-    font-size: 2vw;
-    padding-left: 15px;
-    padding-top: 10px;
+.w-30 {
+	flex: 30;
 }
 
-.project_comments {
-    padding-left: 15px;
-    padding-right: 10px;
-    font-size: 1vw;
-    height: 14vw;
-    overflow-y: scroll;
+.w-50 {
+	flex: 50;
 }
 
-.project_links {
-    overflow: hidden;
-    background-color: red;
-    height: 6vw;
-    display: flex;
+.grid_data {
+	width: 100%;
+	height: 100%;
+	background-color: aliceblue;
+	cursor: pointer;
 }
 
-.project_links a {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    background-color: #333;
-    font-size: 1.5vw;
-    flex-grow: 1;
-    text-align: center;
-    padding-top: 0.5vw;
+.grid_data:hover .box_blanket {
+	display: block;
 }
 
-.project_links a:hover {
-    color: black;
-    border: none;
-    background-color: red;
-}
-
-.project_extender {
-    
-    float: right;
-    background-color: dimgrey;
-    height: 20vw;
-    width: 2vw;
-    color: black;
-    font-family: "Arial";
-    font-size: 2vw;
-    text-align: center;
-    cursor: pointer;
+.box_blanket {
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: #000;
+	opacity: 0.7;
 }
