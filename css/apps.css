@@ -1,101 +1,6 @@
 @import url("navbar_mobile.css") all and (max-width: 767px);
 @import url("navbar_z0.css") all and (min-width: 768px);
 
-@media all and (max-width: 767px) {
-    /* Mobile system should use linear drop downs */
-    
-    /* Disable all desktop HTML */
-    body #column_1 {
-        display: none;
-    }
-    body #column_2 {
-        display: none;
-    }
-    
-    /* Enable mobile HTML */
-    body #mobile_strip {
-        display: inline;
-        width: 100%;
-    }
-    
-    #mobile_strip .project_box {
-        width: 100%;
-        height: auto;
-        border-radius: 0px;
-        border: none;
-        margin: 0px; 
-        display: block;
-    }
-    
-    .project_box img {
-        width: 100%;
-        height: auto;
-        float: none;
-        display: block;
-    }
-    
-    .project_box .project_info {
-        width: 100%;
-        height: auto;
-        float: none;
-        background-color: grey;
-        overflow: visible;
-        font-family: "Arial";
-        opacity: 1;
-        display: block;
-    }
-
-    .project_info .project_title {
-        font-size: 20pt;
-        text-align: center;
-        padding: 5px 0px;
-    }
-    
-    .project_info .project_comments {
-        height: auto;
-        padding-left: 15px;
-        padding-right: 10px;
-        padding-bottom: 10px;
-        font-size: 14pt;
-        overflow-y: visible;
-    }
-    
-    .project_info .project_links {
-        height: auto;
-    }
-    
-    .project_info .project_links a {
-        text-decoration: none;
-        color: white;
-        float: none;
-        width: 100%;
-        display: block;
-        background-color: #333;
-        padding: 15px 10px;
-        text-align: center;
-        font-size: 14pt;
-    }
-    .project_links a:hover {
-        color: white;
-        border: none;
-        background-color: dimgrey; 
-    }
-    
-    .project_box .project_extender {
-        float: none;
-        background-color: dimgrey;
-        height: 30px;
-        width: 100%;
-        color: black;
-        font-family: "Arial";
-        font-size: 16pt;
-        text-align: center;
-        cursor: pointer;
-        display: none;
-        
-    }
-}
-
 /* Hide mobile stuff */
 #navbar_mobile_frame_top {
     display: none;
@@ -108,58 +13,106 @@
 }
 
 body {
-    background-color: black;
-    margin: 0px;
-    padding: 0px;
+	margin: 0px;
+	padding: 0px;
+	background-color: black;
 }
 
-#grid_container {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	justify-items: center;
-	grid-row-gap: 50px;
-	grid-column-gap: 50px;
-	max-width: 1300px;
+#slide_container {
 	margin: 0 auto;
+	width: 1350px;
+	font-family: "Arial";
 }
 
-.grid_block {
-	height: 400px;
-	width: 400px;
-	border: 1px solid #2e2e2e;
+.slide {
+	padding: 2%;
+	width: 100%;
+	border-bottom: 1px solid grey;
 	box-sizing: border-box;
-	position: relative;
 }
 
-.grid_block:hover {
-	border: 1px solid #cacaca;
+.left_container {
+	width: 28%;
+	display: inline-block;
 }
 
-.grid_data {
+.left_container .image_square img {
 	width: 100%;
-	height: 100%;
-	cursor: pointer;
+	max-width: 2000px;
 }
 
-.grid_slider {
-	height: 100%;
-	position: absolute;
-	width: 901px;
-	left: 399px;
-	z-index: 10;
-	border: 1px solid aliceblue;
-	top: -1px;
-	border-left: 0;
-	background-color: grey;
-}
-
-.grid_data a {
+.left_container .button_container .app_button {
+	margin: 10px 0;
+	padding: 0.5em;
 	display: block;
-	height: 100%;
+	border: 1px solid red;
+	box-sizing: border-box;
+	cursor: pointer;
+	color: red;
+	text-align: center;
+	text-decoration: none;
+	/* font-family: "Arial"; */
+	font-size: 1.7em;
 }
 
-.grid_data img {
-	width: 100%;
+.left_container .button_container .app_button:hover {
+	background-color: red;
+	color: black;
 }
 
+.middle_container {
+	padding: 0 20px;
+	width: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	color: grey;
+	vertical-align: top;
+}
 
+.middle_container .title {
+	padding-bottom: 0.5em;
+	font-size: 3em;
+}
+
+.middle_container .summary {
+	font-size: 1.5em;
+}
+
+.middle_container .summary p:first-child {
+	margin-top: 0;
+}
+
+.middle_container .summary p:last-child {
+	margin-bottom: 0;
+}
+
+.middle_container .summary p a {
+	color: red;
+}
+
+.right_container {
+	width: 20%;
+	display: inline-block;
+	color: grey;
+	vertical-align: top;
+}
+
+.right_container .dependency_header {
+	padding-bottom: 15px;
+	text-align: center;
+	font-size: 1.9em;
+}
+
+.right_container .dependency_list {
+	padding: 10px;
+	border: 1px solid grey;
+	box-sizing: border-box;
+}
+
+.right_container .dependency_list span::before {
+	content: "+ ";
+}
+
+.right_container .dependency_list span a {
+	color: red;
+}
