@@ -32,12 +32,12 @@ class SiteBuilder {
         resp.tag = tag;
         
         // Check the hostname; if there is none, page is in debug mode.
-        if (window.location.hostname === "") {
-            console.log ("Sitebuilder in debug mode targetting [" + fileName + "].");
-            var fileLocation = "file:///C:/Users/Mark/Desktop/Github Repo Clones/mluzarow.github.io/templates/" + fileName + ".html";
-        } else {
+        // if (window.location.hostname === "") {
+        //     console.log ("Sitebuilder in debug mode targetting [" + fileName + "].");
+        //     var fileLocation = "file:///C:/Users/Mark/Desktop/Github Repo Clones/mluzarow.github.io/templates/" + fileName + ".html";
+        // } else {
             var fileLocation = "https://mluzarow.github.io/templates/" + fileName + ".html";
-        }
+        // }
         
         // Event trigger on response answer received or timeout
         resp.onreadystatechange = function() {
