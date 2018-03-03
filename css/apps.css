@@ -34,6 +34,7 @@ body {
 .left_container {
 	width: 28%;
 	display: inline-block;
+	box-sizing: border-box;
 }
 
 .left_container .image_square img {
@@ -51,7 +52,6 @@ body {
 	color: red;
 	text-align: center;
 	text-decoration: none;
-	/* font-family: "Arial"; */
 	font-size: 1.7em;
 }
 
@@ -60,9 +60,37 @@ body {
 	color: black;
 }
 
+.right_container_768 {
+	width: 50%;
+	display: none;
+	box-sizing: border-box;
+	color: grey;
+	vertical-align: top;
+}
+
+.right_container_768 .dependency_header {
+	padding-bottom: 15px;
+	text-align: center;
+	font-size: 1.9em;
+}
+
+.right_container_768 .dependency_list {
+	padding: 10px;
+	border: 1px solid grey;
+	box-sizing: border-box;
+}
+
+.right_container_768 .dependency_list span::before {
+	content: "+ ";
+}
+
+.right_container_768 .dependency_list span a {
+	color: red;
+}
+
 .middle_container {
 	padding: 0 20px;
-	width: 50%;
+	width: 52%;
 	display: inline-block;
 	box-sizing: border-box;
 	color: grey;
@@ -115,4 +143,94 @@ body {
 
 .right_container .dependency_list span a {
 	color: red;
+}
+
+@media all and (max-width: 1350px) {
+	#slide_container {
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 960px) {
+	.slide {
+		padding-right: 4%;
+		padding-left: 4%;
+	}
+	
+	.left_container {
+		width: 22%;
+		font-size: 0.71em;
+	}
+	
+	.middle_container {
+		width: 60%;
+		font-size: 0.85em;
+	}
+	
+	.right_container {
+		width: 18%;
+	}
+	
+	.right_container .dependency_header {
+		font-size: 2.5vw;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.left_container {
+		padding-right: 2%;
+		width: 50%;
+	}
+	
+	.right_container_768 {
+		padding-left: 2%;
+		display: inline-block;
+	}
+	
+	.middle_container {
+		width: 100%;
+		display: block;
+	}
+	
+	.right_container {
+		display: none;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.slide {
+		padding: 8%;
+	}
+	
+	.left_container,
+	.middle_container,
+	.right_container {
+		width: 100%;
+		display: block;
+	}
+	
+	.left_container {
+		padding-left: 0;
+		font-size: 1em;
+	}
+	
+	.right_container_768 {
+		display: none;
+	}
+	
+	.middle_container {
+		font-size: 0.9em;
+	}
+	
+	.middle_container .title {
+		padding-top: 1em;
+	}
+	
+	.right_container {
+		padding-top: 1em;
+	}
+	
+	.right_container .dependency_header {
+		font-size: 2.2em;
+	}
 }
