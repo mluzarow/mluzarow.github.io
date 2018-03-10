@@ -31,24 +31,37 @@ body {
 	color: red;
 }
 
-.section_header {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: "Arial";
-    padding-bottom: 5px;
-}
-.section_content {
-    font-size: 18px;
-    font-family: "Arial";
-    padding-bottom: 15px;
-	padding-left: 20px;
+.title {
+	display: block;
+	text-align: center;
+	font-size: 2.5em;
 }
 
-.code_io {
-    background-color: #5B4E4E;
-    padding-left: 25px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.section_header {
+	margin-top: 0.8em;
+	margin-bottom: 0.2em;
+	padding: 0.3em;
+	background-color: red;
+	color: black;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.section_header.code_header {
+	margin-bottom: 0;
+}
+
+.section_content {
+	padding: 1em;
+	font-size: 1.1em;
+}
+
+.section_content.code_content {
+	background-color: #1b1919;
+}
+
+.section_content.code_content pre {
+	margin: 0;
 }
 
 /* Code tabs */
