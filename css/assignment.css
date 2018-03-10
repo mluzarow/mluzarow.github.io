@@ -1,0 +1,107 @@
+@import url("navbar_mobile.css") all and (max-width: 767px);
+@import url("navbar_z0.css") all and (min-width: 768px);
+
+/* Hide mobile stuff */
+#navbar_mobile_frame_top {
+	display: none;
+}
+#navbar_mobile_frame_side {
+	display: none;
+}
+#mobile_strip {
+	display: none;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: black;
+}
+
+#assignment_wrap {
+	margin: 0 auto;
+	padding: 30px 30px 0 30px;
+	max-width: 1350px;
+	box-sizing: border-box;
+	color: white;
+	font-family: "Arial";
+}
+
+#assignment_wrap a {
+	color: red;
+}
+
+.title {
+	display: block;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+.section_header {
+	margin-top: 0.8em;
+	margin-bottom: 0.2em;
+	padding: 0.3em;
+	background-color: red;
+	color: black;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.section_header.code_header {
+	margin-bottom: 0;
+}
+
+.section_content {
+	padding: 1em;
+	font-size: 1.1em;
+}
+
+.section_content.code_content {
+	background-color: #1b1919;
+}
+
+.section_content.code_content pre {
+	margin: 0;
+}
+
+/* Code tabs */
+#code_tab_box {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10px;
+    overflow: hidden;
+    background-color: #333;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#code_tab_box a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+#code_tab_box a:hover {
+    background-color: #FF5151;
+}
+
+#code_tab_box a:focus, .active {
+    background-color: red;
+}
+
+.code_tab_content {
+    display: none;
+    padding: 0px;
+    margin-top: 0px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 50px;
+    background-color: #282B2E;
+    height: 300px;
+    overflow: auto;
+}
