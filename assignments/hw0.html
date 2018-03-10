@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" href="../css/code.css">
+	<link rel="stylesheet" type="text/css" href="../css/androidstudio.css">
+	
+	<script type="text/javascript" src="../js/site_builder.js"></script>
+	<script type="text/javascript" async src="../js/mobile_navbar.js"></script>
+	<script type="text/javascript" src="../js/highlight.pack.js"></script>
+	<script type="text/javascript" src="../js/codeTabs.js"></script>
+	
+	<script>
+		// Script setup
+		window.onload = function () {
+			SiteBuilder.initialize ();
+		}
+	</script>
+	
+	<title>Homework #0</title>
+</head>
+
+<body>
+	<!-- Navbar Desktop -->
+	<br id = "template-navbar" />
+	
+	<!-- Navbar Mobile -->
+	<br id = "template-navbar_mobile" />
+	
+	<!-- General Navbar Spacers -->
+	<br id = "template-spacer_bars" />
+	
+	<div id="statement">
+		<div class="section_header">
+			Objective
+		</div>
+		<div class="section_content">
+			In this assignment, we will investigate the basic console IO, variable
+			types, and formatting available in C#.
+		</div>
+		
+		<div class="section_header">
+			Task
+		</div>
+		<div class="section_content">
+			Create a guided shopping experience wherein a used will choose how many
+			of each stock item they wish to purchase. Upon iterating through each
+			stock option, a receipt will be printed.
+			<br/><br/>
+			Note that the text formatting must be identical to the examples provided
+		</div>
+		
+		<div class="section_header">
+			Input Format
+		</div>
+		<div class="section_content">
+			The user will be queried during runtime as to how many of each item
+			they wish to purchase. The input will be in the form of an integer.
+			At this point, you do not have to check the user input, as it can be
+			assumed to always be of type int.
+		</div>
+		
+		<div class="section_header">
+			Output Format
+		</div>
+		<div class="section_content">
+			A formatted receipt detailing the amounts, costs, and total cost of
+			all purchased items.
+		</div>
+		
+		<div class="section_header">
+			Sample Input
+		</div>
+		<div class="section_content">
+			<div class="code_io">
+<pre>
+*********************************************
+**          Welcome to the eStore!         **
+*********************************************
+** Current Prices:                         **
+**                                         **
+** Super Pepsi   $ 7.50 | Candy     $ 9.79 **
+** Fancy Pen     $ 1.99 | Harddrive $89.99 **
+** Cool Movie    $19.99 | Animes    $27.49 **
+** Fruity Gum    $ 0.69 | Wax (3oz) $ 5.99 **
+*********************************************
+
+What would you like to purchase today?
+
+Super Pepsi?
+>> 0
+Fancy Pen?
+>> 2
+Cool Movie?
+>> 1
+Fruity Gum?
+>> 11
+Candy?
+>> 0
+Harddrive?
+>> 3
+Animes?
+>> 9
+Wax (3ox)?
+>> 50
+</pre>
+			</div>
+		</div>
+		
+		<div class="section_header">
+			Sample Output
+		</div>
+		<div class="section_content">
+			<div class="code_io">
+<pre>
+****************************************
+**              Receipt               **
+****************************************
+**    Item Name   | Count |   Total   **
+** ---------------------------------- **
+** Super Pepsi           0   $   0.00 **
+** Fancy Pen             2   $   3.98 **
+** Cool Movie            1   $  19.99 **
+** Fruity Gum           11   $   7.59 **
+** Candy                 0   $   0.00 **
+** Harddrive             3   $ 269.99 **
+** Animes                9   $ 247.41 **
+** Wax (3oz)            50   $ 299.50 **
+** ---------------------------------- **
+**                SUBTOTAL:  $ 848.46 **
+**               TAX (11%):  $  93.33 **
+**                           -------- **
+**                   TOTAL:  $ 941.79 **
+****************************************
+</pre>
+			</div>
+		</div>
+		
+		<div class="section_header">
+			Explanation
+		</div>
+		<div class="section_content">
+			We print out the static header, detailing the prices off all items.
+			Then, in a predefined order, each item is printed to the console suffixed
+			with a question mark. Immediately after each item query, the user will
+			enter an integer denoting the count of that item they wish to purchase.
+			After an entry is made for each item, the receipt is printed.
+			<br /><br />
+			Note that when calculating tax, always <b>trim</b> trailing numbers
+			beyond the hundredths place.
+			<br /><br />
+			Note that you do not have to worry about price overflow beyond $9,999.99.
+			<br /><br />
+			Note that the output structure and number formatting must match the
+			example perfectly.
+		</div>
+	</div>
+</body>
+</html>
