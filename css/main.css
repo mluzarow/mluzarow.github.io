@@ -18,22 +18,43 @@
     to {opacity: 1}
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    position: relative;
     margin: 0px;
+    height: 100%;
     background-color: black;
 }
 
 #r_front {
     position: absolute;
+    top: 66px;
     width: 100%;
+    height: calc(100% - 66px);
     background-color: black;
-    z-index: 0;
+    z-index: -1;
+}
+
+#r_front::before {
+    width: 0;
+    height: calc(100% - 66px);
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+}
+
+#r_wrap {
+    width: calc(100% - 4.7px);
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* The m {luzarow} title card */
 #r_title {
     text-align: center;
-    margin-top: 30vh; /* Scale centering with viewport height */
     font-size: 11vw;  /* Scale font size to fit viewport width */
     color: #333;
 }
@@ -79,4 +100,20 @@ body {
     color: #333;
     text-align: center;
     margin-top: 1em;
+}
+
+@media all and (min-width: 1920px) {
+    #r_title {
+        font-size: 13.2em;
+    }
+    
+    #r_title_inside,
+    #r_title_brace_left,
+    #r_title_brace_right {
+        font-size: 1em;
+    }
+    
+    #r_subtitle {
+        font-size: 4.45em;
+    }
 }
