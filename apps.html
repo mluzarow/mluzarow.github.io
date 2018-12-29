@@ -1,0 +1,114 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" type="text/css" href="css/apps.css">
+	
+	<script type="text/javascript" src="js/site_builder.js"></script>
+	<script type="text/javascript" async src="js/mobile_navbar.js"></script>
+	
+	<script>
+		// Script setup
+		window.onload = function () {
+			let siteBuilder = new SiteBuilder ();
+			
+			siteBuilder.setConfig ({
+				"app-calc" : {
+					"dependencies" : [],
+					"imgSrc" : "img/apps_WebGraphingCalc.png",
+					"linkGh" : "https://github.com/mluzarow/WebGraphingCalc",
+					"linkLive" : "https://mluzarow.github.io/WebGraphingCalc",
+					"summary" : [
+						"A web based reimagination of the Texas Instruments TI-84\
+						Plus Silver Edition graphing calculator. The calculator\
+						was originally created as a Khan Academy project to supply\
+						a jumping off point for more complex HTML5 canvas projects,\
+						but soon grew into a graphing calculator.",
+						"You can see the original Khan Academy version right\
+						<a href=\"https://www.khanacademy.org/computer-programming/js-graphing-calculator/6520040224325632\">here</a>;\
+						it's not updated as often as the version hosted here, so\
+						it might not be fully up to date."
+					],
+					"title" : "Web-Based TI-84"
+				},
+				"app-crash" : {
+					"dependencies" : [],
+					"imgSrc" : "img/apps_CrashCountdown.png",
+					"linkGh" : "https://github.com/mluzarow/crash-countdown",
+					"linkLive" : "https://mluzarow.github.io/crash-countdown",
+					"summary" : [
+						"A countdown clock counting down towards the release date\
+						of the <a href=\"https://en.wikipedia.org/wiki/Crash_Bandicoot_N._Sane_Trilogy\">Crash Bandicoot N. Sane Trilogy</a>,\
+						a long-awaited remake of the classes Crash Bandicoot games\
+						originally created for the PlayStation.",
+						"That's pretty much it. Lettering was taken directly out\
+						of Crash Bandicoot 2 data files, making it more authentic,\
+						I suppose."
+					],
+					"title" : "Crash Bandicoot Clock"
+				},
+				"app-chat" : {
+					"dependencies" : [],
+					"imgSrc" : "img/apps_CSSChatBot.png",
+					"linkGh" : "https://github.com/mluzarow/chatBot-CSS",
+					"linkLive" : "https://mluzarow.github.io/chatBot-CSS",
+					"summary" : [
+						"Initially an idea for the front page of this site, this\
+						was meant as a interactive and amusing demonstration of\
+						web development. The project consists of a chat window\
+						through which you speak to AImy, your guide. She begins\
+						a conversation regarding the state of the web page and,\
+						using your input, begins to build a web page around her.",
+						"Since this idea was never used, the project was moved to\
+						its own repo for continued development as the silly\
+						gimmick that it is."
+					],
+					"title" : "CSS Chat Bot"
+				},
+				"game-pong-unity" : {
+					"dependencies" : [
+						{
+							"name" : "Unity",
+							"link" : "https://unity3d.com/"
+						}
+					],
+					"imgSrc" : "img/apps_Pong.png",
+					"linkGh" : "https://github.com/mluzarow/WebGL-Pong-With-Unity",
+					"linkLive" : "https://mluzarow.github.io/WebGL-Pong-With-Unity",
+					"summary" : [
+						"Pong! The classic game everyone everywhere in the world\
+						has heard of and most likely played. Created in Unity to\
+						use the vast power of WebGL.",
+						"The initial version of this app was actually made in\
+						Javascript interfacing directly with WebGL. If you would\
+						like to see that version live, click right here! If code\
+						is more interesting to you, click right here. It's\
+						definitely not as polished but it is most definitely Pong. "
+					],
+					"title" : "Pong (via Unity)"
+				}
+			});
+			siteBuilder.buildTemplates ();
+		}
+	</script>
+	
+	<title>Apps</title>
+</head>
+<body>
+	<!-- Navbar Desktop -->
+	<br class="sb-template" data-template="navbar" />
+	
+	<!-- Navbar Mobile -->
+	<br class="sb-template" data-template="navbar_mobile" />
+	
+	<!-- General Navbar Spacers -->
+	<br class="sb-template" data-template="spacer_bars" />
+	
+	<div id="slide_container">
+		<br class="sb-template" data-template="app_display" data-tdata="app-calc" />
+		<br class="sb-template" data-template="app_display" data-tdata="app-crash" />
+		<br class="sb-template" data-template="app_display" data-tdata="app-chat" />
+		<br class="sb-template" data-template="app_display" data-tdata="game-pong-unity" />
+	</div>
+</body>
+</html>
