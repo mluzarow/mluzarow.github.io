@@ -137,6 +137,10 @@ body {
 	box-sizing: border-box;
 }
 
+.right_container .dependency_list span {
+	display: block;
+}
+
 .right_container .dependency_list span::before {
 	content: "+ ";
 }
