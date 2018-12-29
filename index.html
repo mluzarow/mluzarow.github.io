@@ -12,7 +12,8 @@
     <script>
         // Script setup
         window.onload = function () {
-            SiteBuilder.initialize ();
+            let siteBuilder = new SiteBuilder ();
+            siteBuilder.buildTemplates ();
         }
     </script>
     
@@ -21,11 +22,11 @@
 
 <body>
     <!-- Navbar Desktop -->
-    <br id = "template-navbar" />
-
+    <br class="sb-template" data-template="navbar" />
+    
     <!-- Navbar Mobile -->
-    <br id = "template-navbar_mobile" />
-
+    <br class="sb-template" data-template="navbar_mobile" />
+    
     <div id="r_front">
         <div id="r_wrap">
             <div id="r_title">
