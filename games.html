@@ -1,0 +1,50 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" type="text/css" href="css/apps.css">
+	
+	<script type="text/javascript" src="js/site_builder.js"></script>
+	<script type="text/javascript" async src="js/mobile_navbar.js"></script>
+	
+	<script>
+		// Script setup
+		window.onload = function () {
+			let siteBuilder = new SiteBuilder ();
+			
+			siteBuilder.setConfig ({
+				"game-match2" : {
+					"dependencies" : [],
+					"imgSrc" : "../img/apps_Match2.png",
+					"linkGh" : "https://github.com/mluzarow/js-game-match2",
+					"linkLive" : "https://mluzarow.github.io/js-game-match2",
+					"summary" : [
+						"A simple tile matching game. Match two tiles to make them\
+						disappear within the time limit. Once all the tiles\
+						disappear, you win. Has customizable parameters."
+					],
+					"title" : "Match 2"
+				}
+			});
+			siteBuilder.buildTemplates ();
+		}
+	</script>
+	
+	<title>Games</title>
+</head>
+<body>
+	<!-- Navbar Desktop -->
+	<br class="sb-template" data-template="navbar" />
+	
+	<!-- Navbar Mobile -->
+	<br class="sb-template" data-template="navbar_mobile" />
+	
+	<!-- General Navbar Spacers -->
+	<br class="sb-template" data-template="spacer_bars" />
+	
+	<!-- Slides -->
+	<div id="slide_container">
+		<br class="sb-template" data-template="app_display" data-tdata="game-match2" />
+	</div>
+</body>
+</html>
