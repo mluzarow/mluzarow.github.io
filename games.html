@@ -13,9 +13,33 @@
 			let siteBuilder = new SiteBuilder ();
 			
 			siteBuilder.setConfig ({
+				"game-blackjack" : {
+					"dependencies" : [],
+					"imgSrc" : "img/apps_ChooseYourOwnAdventure.png",
+					"linkGh" : "https://github.com/mluzarow/js-game-blackjack",
+					"linkLive" : "https://mluzarow.github.io/js-game-blackjack",
+					"summary" : [
+						"A game of blackjack."
+					],
+					"title" : "Blackjack"
+				},
+				"game-cyoa" : {
+					"dependencies" : [],
+					"imgSrc" : "img/apps_ChooseYourOwnAdventure.png",
+					"linkGh" : "https://github.com/mluzarow/choose-your-own-adventure-html",
+					"linkLive" : "https://mluzarow.github.io/choose-your-own-adventure-html",
+					"summary" : [
+						"Choose your own journey in this mystery thriller. You\
+						find yourself in a mysterious bar. How did you get here?\
+						Who are you? Carve your own path as you unravel the\
+						secrets and try to return home... If you can figure out\
+						where home is."
+					],
+					"title" : "Choose Your Own Adventure"
+				},
 				"game-match2" : {
 					"dependencies" : [],
-					"imgSrc" : "../img/apps_Match2.png",
+					"imgSrc" : "img/apps_Match2.png",
 					"linkGh" : "https://github.com/mluzarow/js-game-match2",
 					"linkLive" : "https://mluzarow.github.io/js-game-match2",
 					"summary" : [
@@ -24,6 +48,27 @@
 						disappear, you win. Has customizable parameters."
 					],
 					"title" : "Match 2"
+				},
+				"game-pong-raw" : {
+					"dependencies" : [
+						{
+							"name" : "webgl-utils",
+							"link" : "https://github.com/olivierrr/webGL-utils"
+						},
+						{
+							"name" : "glMatrix",
+							"link" : "http://glmatrix.net/"
+						}
+					],
+					"imgSrc" : "img/apps_Pong.png",
+					"linkGh" : "https://github.com/mluzarow/WebGL-Stuff",
+					"linkLive" : "https://mluzarow.github.io/WebGL-Stuff",
+					"summary" : [
+						"Pong, created entirely from scratch interacting directly\
+						with WebGL. Very messy. But in the end, it still pongs.\
+						What more could you ask of in life?"
+					],
+					"title" : "Pong (Raw & Unfiltered)"
 				},
 				"game-pong-unity" : {
 					"dependencies" : [
@@ -40,12 +85,39 @@
 						has heard of and most likely played. Created in Unity to\
 						use the vast power of WebGL.",
 						"The initial version of this app was actually made in\
-						Javascript interfacing directly with WebGL. If you would\
-						like to see that version live, click right here! If code\
-						is more interesting to you, click right here. It's\
-						definitely not as polished but it is most definitely Pong. "
+						Javascript interfacing directly with WebGL (it's the\
+						entry right above this one). It's definitely not as\
+						polished but it is most definitely Pong. "
 					],
 					"title" : "Pong (via Unity)"
+				},
+				"game-snake" : {
+					"dependencies" : [],
+					"imgSrc" : "img/apps_Snake.png",
+					"linkGh" : "https://github.com/mluzarow/js-game-snake",
+					"linkLive" : "https://mluzarow.github.io/js-game-snake",
+					"summary" : [
+						"Move around a squarular board in a quest to eat the\
+						most delicious of the taboo fruits: the red square.\
+						Be careful not to run collide into your tail as it\
+						enlongates in tandem with your ever increasing gluttony."
+					],
+					"title" : "Snake"
+				},
+				"game-tictactoe" : {
+					"dependencies" : [],
+					"imgSrc" : "img/apps_TicTacToe.png",
+					"linkGh" : "https://github.com/mluzarow/tic-tac-toe",
+					"linkLive" : "https://mluzarow.github.io/tic-tac-toe",
+					"summary" : [
+						"The classic game of tic-tac-toe in which you memorize\
+						the moves required to always win or, at best, reduce the\
+						round to a tie so as to con your friends out of as much\
+						money as possible in middle school.",
+						"Written with an attempt to use bitwise operations to\
+						maintain game state."
+					],
+					"title" : "Tic-Tac-Toe"
 				}
 			});
 			siteBuilder.buildTemplates ();
@@ -66,8 +138,13 @@
 	
 	<!-- Slides -->
 	<div id="slide_container">
+		<br class="sb-template" data-template="app_display" data-tdata="game-blackjack" />
+		<br class="sb-template" data-template="app_display" data-tdata="game-cyoa" />
 		<br class="sb-template" data-template="app_display" data-tdata="game-match2" />
+		<br class="sb-template" data-template="app_display" data-tdata="game-pong-raw" />
 		<br class="sb-template" data-template="app_display" data-tdata="game-pong-unity" />
+		<br class="sb-template" data-template="app_display" data-tdata="game-snake" />
+		<br class="sb-template" data-template="app_display" data-tdata="game-tictactoe" />
 	</div>
 </body>
 </html>
