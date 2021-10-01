@@ -14,7 +14,7 @@ window.onload = function () {
     });
 
     testWriteLogo ();
-    testWriteNavLinks ();
+    //testWriteNavLinks ();
     // testWriteAllLines ();
     // testWriteAllColumns ();
     // computeColumns ()

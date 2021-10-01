@@ -11,14 +11,20 @@ body {
     overflow: hidden;
 }
 
-#text-output {
-    padding-right: 10px;
-    padding-bottom: 2em;
-    padding-left: 10px;
-    width: 100%;
+body::before {
+    content: '';
+    vertical-align: middle;
+    display: inline-block;
+    width: 0;
     height: 100%;
+}
+
+#text-output {
+    width: 99%;
+	display: inline-block;
+	vertical-align: middle;
     color: green;
-    box-sizing: border-box;
+	text-align: center;
 }
 
 #text-input {
