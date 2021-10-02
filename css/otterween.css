@@ -7,7 +7,7 @@ html {
 
 body {
 	margin: 0 auto;
-	padding: 0;
+	padding: 0 30px 0 0;
 	max-width: 510px;
 	font-family: Consolas;
 }
